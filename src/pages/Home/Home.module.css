@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #c4c4c4;
+  border: 1px solid red;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  border: 1px solid red;
+}
+
+.section__home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5em 0 2em;
+}
+
+.wrapper__title {
+  font-size: 48px;
+  margin-bottom: 0.5em;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+  background: #fff;
+}
+
+.section__features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
