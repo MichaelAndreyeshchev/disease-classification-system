@@ -16,8 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 600px;
-
+  width: clamp(18.7rem, 60vw, 40rem);
   padding: 2em;
   background: #fff;
   border-radius: 30px;
@@ -44,7 +43,7 @@
   display: flex;
   align-items: center;
   margin: 0.4em 0;
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 3vw, 1.05rem);
   color: hsl(0, 100%, 50%);
 }
 
@@ -53,11 +52,10 @@
 }
 
 .modal__button {
-  max-width: 150px;
   align-self: flex-end;
   padding: 1em 2em;
 
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 3vw, 1rem);
   background: #4d9eea;
   color: #fff;
   border: 0;
