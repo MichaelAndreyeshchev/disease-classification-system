@@ -28,21 +28,36 @@
 }
 
 .wrapper__title {
-  font-size: 48px;
+  font-size: clamp(2rem, 15vw, 4rem);
   margin-bottom: 0.5em;
 }
 
 .circle {
-  width: 400px;
-  height: 400px;
-
+  display: none;
   border-radius: 50%;
   background: #fff;
 }
 
 .section__features {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .circle {
+    display: block;
+    width: 400px;
+    height: 400px;
+  }
+
+  .wrapper__title {
+    font-size: clamp(2rem, 15vw, 3.5rem);
+  }
+
+  .section__features {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }

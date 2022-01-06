@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '../../components/Button/Button';
+import LinkCustom from '../../components/Link/Link';
+import * as ROUTES from '../../Constants/Routes';
 import style from './Home.module.css';
 
 function home() {
@@ -14,8 +16,19 @@ function home() {
       </section>
 
       <section className={style.container + ' ' + style.section__features}>
-        <Button text='Image Based' iconPosition='left' size='big' />
-        <Button text='Text Based' size='big' />
+        <LinkCustom
+          to={ROUTES.IMAGE_INDIVIDUAL}
+          text='Image Based'
+          iconPosition='left'
+          size='big'
+        />
+
+        <LinkCustom
+          to={ROUTES.TEXT_DETECTION}
+          text='Text Based'
+          iconPosition='right'
+          size='big'
+        />
       </section>
     </main>
   );

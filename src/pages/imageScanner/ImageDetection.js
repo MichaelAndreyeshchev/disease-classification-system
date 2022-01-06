@@ -1,13 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import * as ROUTES from '../../Constants/Routes';
 
 import Button from '../../components/Button/Button';
 import style from './ImageDetection.module.css';
 
 function ImageDetection() {
   const navigate = useNavigate();
-  //   const [isClicked, setIsClicked] = useState(false);
-
   const fileInput = useRef(null);
 
   const handleClick = () => {
@@ -17,7 +16,7 @@ function ImageDetection() {
   const handleChange = () => {
     console.log('Hello');
     console.log(fileInput.current.files[0].name);
-    navigate('/loading');
+    navigate(ROUTES.LOADING);
   };
 
   return (

@@ -7,26 +7,27 @@ import {
   NavBtn,
   NavBtnLink,
 } from './NavbarElements';
+import * as ROUTES from '../../Constants/Routes';
 
-function Navbar() {
+function Navbar({ toggle }) {
   return (
     <>
       <Nav>
         <NavLink to='/'>
           <h1>Logo</h1>
         </NavLink>
-        <Bars />
+        <Bars onClick={toggle} />
         <NavMenu>
-          <NavLink to='/text/detection' activeStyle>
+          <NavLink to={ROUTES.TEXT_DETECTION} activeStyle>
             Text Detection
           </NavLink>
-          <NavLink to='/image/detection' activeStyle>
+          <NavLink to={ROUTES.IMAGE_INDIVIDUAL} activeStyle>
             Image Detection
           </NavLink>
-          <NavLink to='/credits' activeStyle>
+          <NavLink to={ROUTES.CREDITS} activeStyle>
             Credits
           </NavLink>
-          <NavLink to='/contact' activeStyle>
+          <NavLink to={ROUTES.CONTACT} activeStyle>
             Contact Us
           </NavLink>
         </NavMenu>

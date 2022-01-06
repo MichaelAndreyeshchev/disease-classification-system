@@ -1,0 +1,70 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 2em;
+
+  background: #c4c4c4;
+  border: 1px solid red;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+
+  padding: 2em;
+  background: #fff;
+  border-radius: 30px;
+
+  border: 1px solid red;
+}
+
+.modal__label {
+  font-size: 1.5rem;
+}
+
+.modal__input {
+  width: 100%;
+  resize: none;
+  margin: 1em 0;
+  padding: 1em;
+
+  background: #e0e0e0;
+  border: 0;
+  border-radius: 20px;
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  margin: 0.4em 0;
+  font-size: 0.95rem;
+  color: hsl(0, 100%, 50%);
+}
+
+.error-container__message {
+  margin-left: 0.3em;
+}
+
+.modal__button {
+  max-width: 150px;
+  align-self: flex-end;
+  padding: 1em 2em;
+
+  font-size: 1rem;
+  background: #4d9eea;
+  color: #fff;
+  border: 0;
+
+  border-radius: 100px;
+}
+
+.modal__button:hover {
+  filter: brightness(0.9);
+}
