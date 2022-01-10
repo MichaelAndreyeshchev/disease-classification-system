@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import style from './drop-file-input.module.css';
-
+import styles from './drop-file-input.module.css';
 import uploadImg from '../../assets/cloud-upload-regular-240.png';
 
 const DropFileInput = (props) => {
@@ -24,13 +23,13 @@ const DropFileInput = (props) => {
   const onDrop = () => {
     console.log('OnDrop');
     setIsDragged(false);
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       setIsDisabled(true);
     }, 300);
   };
 
   const onFileDrop = (e) => {
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       setIsDisabled(true);
     }, 300);
     const newFile = e.target.files[0];
@@ -39,7 +38,7 @@ const DropFileInput = (props) => {
 
   const handleClick = () => {
     setIsDisabled(false);
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       inputRef.current.click();
       setIsDisabled(true);
     }, 300);
@@ -48,23 +47,23 @@ const DropFileInput = (props) => {
   return (
     <>
       <main
-        className={style.container + ' ' + (isDragged ? style.dragover : ' ')}
+        className={styles.container + ' ' + (isDragged ? styles.dragover : ' ')}
       >
         <div
-          className={style['drop-file-input']}
+          className={styles['drop-file-input']}
           onDragEnter={onDragEnter}
           onDragLeave={onDragLeave}
           onDrop={onDrop}
         >
           <div
             className={
-              style['drop-file-input__label'] +
+              styles['drop-file-input__wrapper'] +
               ' ' +
-              (isDragged ? style['label-dragover'] : ' ')
+              (isDragged ? styles['label-dragover'] : ' ')
             }
             onClick={handleClick}
           >
-            <img src={uploadImg} alt='' />
+            <img src={uploadImg} alt='' className={styles.wrapper__image} />
             <p>Drag & Drop your Images here</p>
             <p>or</p>
             <p>Click to browse your file</p>
