@@ -24,13 +24,13 @@ const FolderDetection = (props) => {
   const onDrop = () => {
     console.log('OnDrop');
     setIsDragged(false);
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       setIsDisabled(true);
     }, 300);
   };
 
   const onFileDrop = (e) => {
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       setIsDisabled(true);
     }, 300);
 
@@ -41,7 +41,7 @@ const FolderDetection = (props) => {
 
   const handleClick = () => {
     setIsDisabled(false);
-    const timeout = setTimeout(() => {
+    setTimeout(() => {
       inputRef.current.click();
       setIsDisabled(true);
     }, 300);
