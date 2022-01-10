@@ -7,17 +7,12 @@
   min-height: 100vh;
 
   background: #c4c4c4;
-  /* border: 1px solid red; */
 }
 
 .drop-file-input {
   position: relative;
-  /* width: 400px; */
-  /* height: 200px; */
   width: 100%;
   min-height: 100vh;
-  /* border: 2px dashed #525151; */
-  /* border-radius: 20px; */
 
   display: flex;
   align-items: center;
@@ -38,9 +33,10 @@
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
-.drop-file-input__label {
+.drop-file-input__wrapper {
   text-align: center;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(1.1rem, 2vw, 2rem);
   font-weight: 600;
   padding: 10px;
   border: 1px solid red;
@@ -48,7 +44,7 @@
   z-index: 10;
 }
 
-.drop-file-input__label:hover {
+.drop-file-input__wrapper:hover {
   opacity: 0.6;
 }
 
@@ -56,6 +52,6 @@
   z-index: -1;
 }
 
-.drop-file-input__label img {
-  width: 100px;
+.wrapper__image {
+  width: clamp(3rem, 7vw, 7rem);
 }
