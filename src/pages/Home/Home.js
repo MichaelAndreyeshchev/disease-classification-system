@@ -2,36 +2,44 @@ import React from 'react';
 import Button from '../../components/Button/Button';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
-import style from './Home.module.css';
+import styles from './Home.module.css';
 
-function home() {
+function Home() {
   return (
-    <main className={style.main}>
-      <section className={style.container + ' ' + style.section__home}>
-        <div className={style.wrapper}>
-          <h1 className={style.wrapper__title}>Welcome to Disease Detector</h1>
+    <main className={styles.main}>
+      <section className={styles.container + ' ' + styles.section__home}>
+        <div className={styles.wrapper}>
+          <h1 className={styles.wrapper__title}>Welcome to Disease Detector</h1>
           <Button text="Let's Explore" />
         </div>
-        <div className={style.circle}></div>
+        <div className={styles.circle}></div>
       </section>
 
-      <section className={style.container + ' ' + style.section__features}>
-        <LinkCustom
-          to={ROUTES.IMAGE_INDIVIDUAL}
-          text='Image Based'
-          iconPosition='left'
-          size='big'
-        />
+      <section className={styles.container + ' ' + styles.section__features}>
+        <div
+          className={styles.container__wrapper + ' ' + styles['wrapper--left']}
+        >
+          <LinkCustom
+            to={ROUTES.IMAGE_INDIVIDUAL}
+            text='Image Based'
+            iconPosition='left'
+            size='big'
+          />
+        </div>
 
-        <LinkCustom
-          to={ROUTES.TEXT_DETECTION}
-          text='Text Based'
-          iconPosition='right'
-          size='big'
-        />
+        <div
+          className={styles.container__wrapper + ' ' + styles['wrapper--right']}
+        >
+          <LinkCustom
+            to={ROUTES.TEXT_DETECTION}
+            text='Text Based'
+            iconPosition='right'
+            size='big'
+          />
+        </div>
       </section>
     </main>
   );
 }
 
-export default home;
+export default Home;
