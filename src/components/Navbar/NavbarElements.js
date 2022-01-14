@@ -19,9 +19,14 @@ export const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  transition: transform 0.25s ease-in-out;
 
   &.active {
     color: #c4c4c4;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
   }
 `;
 
