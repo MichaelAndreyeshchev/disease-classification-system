@@ -45,6 +45,14 @@
   align-items: center;
 }
 
+.wrapper--left {
+  background: none;
+}
+
+.wrapper--right {
+  background: none;
+}
+
 @media screen and (min-width: 1024px) {
   .circle {
     display: block;
@@ -58,6 +66,26 @@
 
   .section__features {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    padding-bottom: 1em;
+  }
+
+  .container__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    min-height: 100vh;
+
+    border: 1px solid red;
+  }
+
+  .wrapper--left {
+    background: url('../../Images/Rectangle\ 9.jpg');
+  }
+
+  .wrapper--right {
+    background: url('../../Images/Rectangle\ 8.jpg');
   }
 }
