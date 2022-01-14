@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
-} from './NavbarElements';
+import { Nav, NavLink, Bars, NavMenu } from './NavbarElements';
 import * as ROUTES from '../../Constants/Routes';
 
 function Navbar({ toggle }) {
