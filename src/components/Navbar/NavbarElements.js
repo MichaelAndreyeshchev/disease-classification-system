@@ -22,11 +22,11 @@ export const NavLink = styled(Link)`
   transition: transform 0.25s ease-in-out;
 
   &.active {
-    color: #c4c4c4;
+    font-weight: 700;
   }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: ${(props) => (!props.logo ? 'translateY(-5px)' : 'none')};
   }
 `;
 
