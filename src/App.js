@@ -12,6 +12,7 @@ import TextDetection from './pages/textDetection/TextDetection';
 import Result from './pages/Result/Result';
 import Contact from './pages/Contact/Contact';
 import Sidebar from './components/Sidebar';
+import Credits from './pages/Credits/Credits';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         <Route path={ROUTES.TEXT_DETECTION} element={<TextDetection />} />
         <Route path={ROUTES.RESULT} element={<Result />} />
         <Route path={ROUTES.CONTACT} element={<Contact />} />
+        <Route path={ROUTES.CREDITS} element={<Credits />} />
       </Routes>
     </Router>
   );

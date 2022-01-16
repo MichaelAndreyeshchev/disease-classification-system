@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #c4c4c4;
+  border: 1px solid red;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+
+  border: 1px solid red;
+}
+
+.container__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__image {
+  width: 80%;
+  /* border: 1px solid green; */
+}
