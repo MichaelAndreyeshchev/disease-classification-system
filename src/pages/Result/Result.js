@@ -1,22 +1,22 @@
 import React from 'react';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
-import style from './Result.module.css';
+import styles from './Result.module.css';
 
 function Result() {
   return (
-    <main className={style.main}>
-      <article className={style.container}>
-        <h2 className={style['container__heading--result']}>You might have</h2>
-        <h1 className={style.container__result}>
+    <main className={styles.main}>
+      <article className={styles.container}>
+        <h2 className={styles['container__heading--result']}>You might have</h2>
+        <h1 className={styles.container__result}>
           Tubercolosis
-          <spans className={style.container__percentages}>70%</spans>
+          <spans className={styles.container__percentages}>70%</spans>
         </h1>
       </article>
 
-      <article className={style.container}>
-        <h2 className={style.container__heading}>Description</h2>
-        <p>
+      <article className={styles.container}>
+        <h2 className={styles.container__heading}>Description</h2>
+        <p className={styles.container__description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           accumsan at tortor at gravida. Nulla at metus massa. Duis vestibulum
           interdum sagittis. Ut at feugiat lorem. Class aptent taciti sociosqu
@@ -36,59 +36,59 @@ function Result() {
         </p>
       </article>
 
-      <article className={style.container}>
-        <h2 className={style.container__heading}>Other Results</h2>
-        <div className={style['container-other-result']}>
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+      <article className={styles.container}>
+        <h2 className={styles.container__heading}>Other Results</h2>
+        <div className={styles['container-other-result']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
           </article>
 
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
           </article>
 
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia hello asd asd asd </h3>
             </div>
           </article>
 
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
           </article>
 
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
           </article>
 
-          <article className={style['container-other-result__wrapper']}>
-            <div className={style['container-other-result__wrapper--left']}>
+          <article className={styles['container-other-result__wrapper']}>
+            <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
-            <div className={style['container-other-result__wrapper--right']}>
+            <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
           </article>
@@ -96,28 +96,39 @@ function Result() {
       </article>
 
       <article
-        className={style.container + ' ' + style['container--collect-data']}
+        className={styles.container + ' ' + styles['container--collect-data']}
       >
         <div>
           <h2
             className={
-              style.container__heading + ' ' + style['heading--collect-data']
+              styles.container__heading + ' ' + styles['heading--collect-data']
             }
           >
             Can we collect your data for improving our algorithm to provide you
             with the best service?
           </h2>
-          <div className={style['wrapper-collect-data']}>
-            <input type='radio' id='yes' name='collect_data' value='Yes' />
-            <label for='yes'>Yes</label>
+          <div className={styles['wrapper-collect-data']}>
+            <input
+              type='radio'
+              id='yes'
+              name='collect_data'
+              value='Yes'
+              className={styles['wrapper__radio-button']}
+            />
+            <label for='yes' className={styles.wrapper__label}>
+              Yes
+            </label>
             <input
               type='radio'
               id='no'
               name='collect_data'
               value='No'
+              className={styles['wrapper__radio-button']}
               defaultChecked
             />
-            <label for='no'>No</label>
+            <label for='no' className={styles.wrapper__label}>
+              No
+            </label>
           </div>
         </div>
 

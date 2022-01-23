@@ -28,13 +28,13 @@
 .container__heading--result {
   margin-bottom: 1rem;
 
-  font-size: 2.3rem;
+  font-size: clamp(1.4rem, 2.7vw, 2.5rem);
   font-weight: 400;
   align-self: flex-start;
 }
 
 .container__result {
-  font-size: 4rem;
+  font-size: clamp(2.7rem, 5vw, 5rem);
 }
 
 .container__percentages {
@@ -43,6 +43,10 @@
 
 .container__heading--result {
   align-self: center;
+}
+
+.container__description {
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
 }
 
 .container-other-result {
@@ -63,11 +67,11 @@
 }
 
 .container-other-result__wrapper h3 {
-  font-size: 25px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
-.container-other-result__wrapper--left,
-.container-other-result__wrapper--right {
+.container-other-result__wrapper-left,
+.container-other-result__wrapper-right {
   display: flex;
   align-items: center;
 
@@ -75,7 +79,7 @@
   height: 100%;
 }
 
-.container-other-result__wrapper--left {
+.container-other-result__wrapper-left {
   border-radius: 10px 0 0 10px;
   background: #696969;
 }
@@ -86,11 +90,11 @@
 
   background: #d8d8d8;
   margin-bottom: 0;
-  padding: 2.5em 0;
+  padding: 2.5em 1.5em;
 }
 
 .heading--collect-data {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 1.8vw, 2rem);
   font-weight: 700;
 }
 
@@ -99,12 +103,12 @@
   border: 1px solid red;
 }
 
-.wrapper-collect-data > input {
+.wrapper__radio-button {
   margin-right: 5px;
 }
 
-.wrapper-collect-data > label {
-  font-size: 1.2rem;
+.wrapper__label {
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
   margin-right: 1em;
 }
 
