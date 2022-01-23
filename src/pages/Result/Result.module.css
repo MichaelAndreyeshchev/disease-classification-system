@@ -49,6 +49,10 @@
   font-size: clamp(0.9rem, 1.2vw, 1.1rem);
 }
 
+.container--result {
+  margin-bottom: 2em;
+}
+
 .container-other-result {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +93,7 @@
   align-items: center;
 
   background: #d8d8d8;
+  margin-top: auto;
   margin-bottom: 0;
   padding: 2.5em 1.5em;
 }

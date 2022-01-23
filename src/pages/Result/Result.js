@@ -36,7 +36,7 @@ function Result() {
         </p>
       </article>
 
-      <article className={styles.container}>
+      <article className={styles.container + ' ' + styles['container--result']}>
         <h2 className={styles.container__heading}>Other Results</h2>
         <div className={styles['container-other-result']}>
           <article className={styles['container-other-result__wrapper']}>
@@ -139,8 +139,6 @@ function Result() {
           size='big'
         />
       </article>
-
-      {/* <p>This is result</p> */}
     </main>
   );
 }
