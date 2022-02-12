@@ -1,0 +1,24 @@
+.button {
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  border: 0;
+  margin: 0 1em;
+  font-size: 1rem;
+  background: hsl(210, 90%, 40%);
+  color: #fff;
+}
+
+.button:hover {
+  background: hsl(210, 90%, 35%);
+}
+
+.button--reject {
+  background: #fff;
+  color: hsl(210, 90%, 40%);
+  border: 1px solid hsl(210, 90%, 40%);
+}
+
+.button--reject:hover {
+  background: hsl(210, 90%, 95%);
+  box-shadow: inset 0 0 0 1px hsl(210, 90%, 40%);
+}
