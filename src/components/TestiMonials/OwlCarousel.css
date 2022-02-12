@@ -1,0 +1,41 @@
+#customer-testimonoals {
+  margin-top: 6%;
+  width: 95%;
+  border: 1px solid red;
+}
+
+#customer-testimonoals .item {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 0px;
+  opacity: 0.2;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid blue;
+}
+
+#customer-testimonoals {
+  border: 1px solid green;
+}
+
+#customer-testimonoals .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+
+/* #customer-testimonoals .owl-item.active.center .item:hover {
+    border: 1px solid red;
+  } */
+
+#customer-testimonoals .owl-item.active.center .item .shadow-effect:hover {
+  border: 1px solid red;
+}
+
+.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+}
