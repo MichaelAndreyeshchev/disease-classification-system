@@ -4,7 +4,6 @@ import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-
 import './TestiMonials.css';
 
 import Modal from '../Modal/Modal';
@@ -13,8 +12,6 @@ const TestiMonials = () => {
   const [modalClicked, setModalClicked] = useState(false);
   const [currentCardPosition, setCurrentCardPosition] = useState(0);
   let carousel = useRef(null);
-
-  // owl-item cloned active center
 
   const testiMonials = [
     {
@@ -45,13 +42,6 @@ const TestiMonials = () => {
       address: 'USA',
       img: 'https://dummyimage.com/600x400/000/00ffbf.jpg&text=LOGO',
     },
-    // {
-    //   name: 'hello 1',
-    //   description:
-    //     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
-    //   address: 'boi 1',
-    //   img: 'https://i.ibb.co/10SYccm/1552313010-354215-noticia-normal.jpg',
-    // },
   ];
 
   //Owl Carousel Settings
@@ -87,17 +77,9 @@ const TestiMonials = () => {
   }, [modalClicked]);
 
   return (
-    <main className='testimonial_container'>
+    <div className='testimonial_container'>
       <section id='testimonial' className='testimonials pt-70 pb-70'>
         <div className='container mt-5'>
-          {/* <h4 className='miniTitle text-center'>Here are the resources we use</h4>
-          <div className='text-center '>
-            <h3 className='sectionTitle'>What Our Clients are Saying?</h3>
-          </div>
-          <p className='text-center '>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna.
-          </p> */}
           <div className='row'>
             <div className='col-md-12' className='carousel_container'>
               <button
@@ -112,25 +94,6 @@ const TestiMonials = () => {
                 className='owl-carousel owl-theme'
                 {...options}
               >
-                {/* {testiMonials.length === 0 ? (
-                  <div className='item'>
-                    <div className='shadow-effect'>
-                      <img className='img-circle' src={userPic} />
-
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna.
-                      </p>
-                    </div>
-                    <div className='testimonial-name'>
-                      <h5>Rajon Rony</h5>
-                      <small>ITALY</small>
-                    </div>
-                  </div>
-                ) : (
-      
-                )} */}
                 {testiMonials.map((testiMonialDetail, i) => {
                   return (
                     <TestiMonialsDetails
@@ -177,6 +140,7 @@ const TestiMonials = () => {
           </div>
         </div>
       </section>
+
       {modalClicked && (
         <Modal
           modalOpen={modalClicked}
@@ -185,7 +149,7 @@ const TestiMonials = () => {
           parent={carousel}
         />
       )}
-    </main>
+    </div>
   );
 };
 
