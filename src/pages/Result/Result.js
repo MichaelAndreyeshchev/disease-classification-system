@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import styles from './Result.module.css';
 
 function Result() {
@@ -92,6 +93,14 @@ function Result() {
               <h3>Leukimia</h3>
             </div>
           </article>
+        </div>
+        <div className={styles.container__footer}>
+          <h3 className={styles['container-footer__title']}>
+            See more results{' '}
+          </h3>{' '}
+          <BsFillArrowDownCircleFill
+            className={styles['container-footer__icon']}
+          />
         </div>
       </article>
 
