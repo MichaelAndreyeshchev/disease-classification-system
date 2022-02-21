@@ -1,5 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails';
+import {
+  BsFillArrowLeftCircleFill,
+  BsFillArrowRightCircleFill,
+} from 'react-icons/bs';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -46,7 +50,8 @@ const TestiMonials = () => {
 
   //Owl Carousel Settings
   const options = {
-    loop: true,
+    loop: false,
+    rewind: true,
     center: true,
     items: 3,
     margin: 0,
@@ -82,12 +87,10 @@ const TestiMonials = () => {
         <div className='container mt-5'>
           <div className='row'>
             <div className='col-md-12' className='carousel_container'>
-              <button
-                className='button_carousel'
+              <BsFillArrowLeftCircleFill
+                className='carousel__icon icon--left'
                 onClick={() => carousel.current.prev(1000)}
-              >
-                Left
-              </button>
+              />
               <OwlCarousel
                 ref={carousel}
                 id='customer-testimonoals'
@@ -106,14 +109,12 @@ const TestiMonials = () => {
                   );
                 })}
               </OwlCarousel>
-              <button
-                className='button_carousel'
+              <BsFillArrowRightCircleFill
+                className='carousel__icon'
                 onClick={() => carousel.current.next(1000)}
-              >
-                right
-              </button>
+              />
             </div>
-            <button
+            {/* <button
               onClick={() => {
                 carousel.current.stop();
                 console.log('clicked stop');
@@ -136,7 +137,7 @@ const TestiMonials = () => {
               }}
             >
               open modal
-            </button>
+            </button> */}
           </div>
         </div>
       </section>
