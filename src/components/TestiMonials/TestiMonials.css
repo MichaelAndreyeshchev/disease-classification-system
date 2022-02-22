@@ -7,11 +7,10 @@
 
 .shadow-effect {
   background: hsl(0, 0%, 80%);
-  padding: 20px;
+  padding: 1.25em;
   border-radius: 4px;
   text-align: center;
   border: 1px solid hsl(0, 0%, 80%);
-  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.02); */
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1), 0 15px 20px rgba(0, 0, 0, 0.05);
 }
 #shadow-effect p {
@@ -39,14 +38,14 @@
 .carousel_container {
   display: flex;
   position: relative;
-  /* justify-content: center; */
   align-items: center;
   border: 1px solid red;
 }
 
 .carousel__icon {
   position: absolute;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
+  font-size: clamp(1.5rem, 3vw, 3rem);
   border: 1px solid red;
   right: 0;
   margin-right: 10px;
