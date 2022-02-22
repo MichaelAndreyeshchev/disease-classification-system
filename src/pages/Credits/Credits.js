@@ -7,14 +7,24 @@ import Card from '../../components/Card/Card';
 const Credits = () => {
   return (
     <main className={styles.main}>
-      <section>
+      <section className={styles.section}>
+        <h1 className={styles.section__title}>Our Resources</h1>
         <TestiMonials />
       </section>
-      <section>
-        <h2>Meet the team</h2>
-        <article>
-          <Card />
-          <Card />
+      <section className={styles.section}>
+        <h2 className={styles.section__title}>Meet the Team</h2>
+        <article className={styles.wrapper}>
+          <Card
+            name='Michael Andrev'
+            role='Data Scientist'
+            description=''
+            variant='michael'
+          />
+          <Card
+            name='Joseph Haryanto'
+            role='Frontend developer'
+            description=''
+          />
         </article>
       </section>
     </main>
