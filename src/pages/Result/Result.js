@@ -1,10 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
-import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+
 import styles from './Result.module.css';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import Modal from '../../components/Modal/Modal';
 
 function Result() {
+  const [modalClicked, setModalClicked] = useState(false);
+
+  let dummyData = [
+    {
+      name: 'Leukimia...',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+  ];
+
+  let dummyData2 = [
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+    {
+      name: 'Leukimia',
+      percentage: '50',
+    },
+  ];
+
   return (
     <main className={styles.main}>
       <article className={styles.container}>
@@ -39,17 +85,25 @@ function Result() {
 
       <article className={styles.container + ' ' + styles['container--result']}>
         <h2 className={styles.container__heading}>Other Results</h2>
-        <div className={styles['container-other-result']}>
-          <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia</h3>
-            </div>
-          </article>
 
-          <article className={styles['container-other-result__wrapper']}>
+        <div className={styles['container-other-result']}>
+          {dummyData.map((data, i) => (
+            <article className={styles['container-other-result__wrapper']}>
+              <div className={styles['container-other-result__wrapper-left']}>
+                <h3>{data.percentage}%</h3>
+              </div>
+              <div className={styles['container-other-result__wrapper-right']}>
+                <h3>{data.name}</h3>
+              </div>
+            </article>
+          ))}
+          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          accumsan at tortor at gravida. Nulla at metus massa. Duis vestibulum
+          interdum sagittis. Ut at feugiat lorem. Class aptent taciti sociosqu
+          ad litora torquent per conubia nostra, per inceptos himenaeos. Nam
+          rutrum nec lacus sed malesuada. Nunc imperdiet accumsan ipsum quis
+          egestas. Maecenas malesuada luctus libero, */}
+          {/* <article className={styles['container-other-result__wrapper']}>
             <div className={styles['container-other-result__wrapper-left']}>
               <h3>50%</h3>
             </div>
@@ -92,9 +146,12 @@ function Result() {
             <div className={styles['container-other-result__wrapper-right']}>
               <h3>Leukimia</h3>
             </div>
-          </article>
+          </article> */}
         </div>
-        <div className={styles.container__footer}>
+        <div
+          className={styles.container__footer}
+          onClick={(e) => setModalClicked(true)}
+        >
           <h3 className={styles['container-footer__title']}>
             See more results{' '}
           </h3>{' '}
@@ -148,6 +205,14 @@ function Result() {
           size='big'
         />
       </article>
+
+      {modalClicked && (
+        <Modal
+          modalOpen={modalClicked}
+          setModalOpen={setModalClicked}
+          title='All Result'
+        />
+      )}
     </main>
   );
 }
