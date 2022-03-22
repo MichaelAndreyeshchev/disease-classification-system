@@ -55,10 +55,10 @@ const TestiMonials = () => {
     center: true,
     items: 3,
     margin: 0,
-    autoplay: false,
+    autoplay: true,
     dots: true,
-    autoplayTimeout: 8500,
-    smartSpeed: 450,
+    autoplayTimeout: 4000,
+    smartSpeed: 1000,
     nav: false,
     responsive: {
       0: {
@@ -86,7 +86,7 @@ const TestiMonials = () => {
       <section id='testimonial' className='testimonials pt-70 pb-70'>
         <div className='container mt-5'>
           <div className='row'>
-            <div className='col-md-12' className='carousel_container'>
+            <div className='col-md-12 carousel_container'>
               <BsFillArrowLeftCircleFill
                 className='carousel__icon icon--left'
                 onClick={() => carousel.current.prev(1000)}
@@ -148,6 +148,7 @@ const TestiMonials = () => {
           setModalOpen={setModalClicked}
           cardPosition={currentCardPosition}
           parent={carousel}
+          title='Links'
         />
       )}
     </div>
