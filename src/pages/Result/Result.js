@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 
@@ -50,6 +50,14 @@ function Result() {
       percentage: '50',
     },
   ];
+
+  useEffect(() => {
+    if (modalClicked) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [modalClicked]);
 
   return (
     <main className={styles.main}>

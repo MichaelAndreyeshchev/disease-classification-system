@@ -12,6 +12,11 @@
   border: 1px solid red;
 }
 
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -56,6 +61,7 @@
 .container__footer {
   display: flex;
   align-items: center;
+  border: 1px solid blue;
 }
 
 .container-footer__title {
