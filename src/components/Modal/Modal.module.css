@@ -53,6 +53,10 @@
   border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 
+.body__wrapper > p {
+  margin: 10px 0;
+}
+
 .modal__links {
   display: flex;
   justify-content: center;
@@ -64,6 +68,14 @@
 
   font-size: clamp(1rem, 4vw, 1.3rem);
   border-radius: 50%;
+}
+
+.modal__list {
+  border: 1px solid red;
+}
+
+.list__links {
+  list-style: none;
 }
 
 .list {
@@ -92,4 +104,40 @@
 .modal__footer {
   display: flex;
   justify-content: flex-end;
+}
+
+.input-button {
+  padding: 0.5em 2em;
+  background: hsl(210, 90%, 40%);
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+
+  border: 1px solid red;
+}
+
+.input-button:hover,
+.input-button.active {
+  background: hsl(210, 90%, 50%);
+}
+
+.radio-button {
+  opacity: 1;
+  width: 0;
+}
+
+.wrapper--download > * {
+  margin: 1em 0;
+}
+
+.wrapper--buttons > * {
+  margin-right: 0.5em;
+}
+
+.button--csv {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  font-size: 0;
+  position: absolute;
 }
