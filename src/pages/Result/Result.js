@@ -3,51 +3,125 @@ import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 
 import styles from './Result.module.css';
-import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import { BsFillArrowDownCircleFill, BsDownload } from 'react-icons/bs';
 import Modal from '../../components/Modal/Modal';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
+  const [NumberOfAddition, setNumberOfAddition] = useState(3);
+  const [currentDataIndex, setCurrentDataIndex] = useState(0);
+  const [numberOfData, setNumberOfData] = useState(3);
 
   let dummyData = [
     {
-      name: 'Leukimia...',
+      name: 'Atherosclerosis',
       percentage: '50',
+      tag: 'Circulatory',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Lymphadenopathy',
+      percentage: '48',
+      tag: 'Lymphatic',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
-    },
-  ];
-
-  let dummyData2 = [
-    {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Atopic Dermatitis',
+      percentage: '49',
+      tag: 'Integumentary',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Leukemia...',
+      percentage: '47',
+      tag: 'Circulatory',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Leukemia',
+      percentage: '46',
+      tag: 'Lymphatic',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Leukemia',
+      percentage: '45',
+      tag: 'Respiratory',
     },
     {
-      name: 'Leukimia',
-      percentage: '50',
+      name: 'Leukemia...',
+      percentage: '44',
+      tag: 'Circulatory',
     },
     {
-      name: 'Leukimia',
+      name: 'Leukemia',
+      percentage: '43',
+      tag: 'Lymphatic',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '41',
+      tag: 'Respiratory',
+    },
+    {
+      name: 'Leukemia...',
+      percentage: '42',
+      tag: 'Circulatory',
+    },
+    {
+      name: 'Leukemia',
       percentage: '50',
+      tag: 'Lymphatic',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Respiratory',
+    },
+    {
+      name: 'Leukemia...',
+      percentage: '50',
+      tag: 'Circulatory',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Lymphatic',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Respiratory',
+    },
+    {
+      name: 'Leukemia...',
+      percentage: '50',
+      tag: 'Circulatory',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Lymphatic',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Respiratory',
+    },
+    {
+      name: 'Leukemia...',
+      percentage: '50',
+      tag: 'Circulatory',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Lymphatic',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Respiratory',
+    },
+    {
+      name: 'Leukemia',
+      percentage: '50',
+      tag: 'Respiratory',
     },
   ];
 
@@ -92,73 +166,70 @@ function Result() {
       </article>
 
       <article className={styles.container + ' ' + styles['container--result']}>
-        <h2 className={styles.container__heading}>Other Results</h2>
+        <article className={styles['container_header']}>
+          <div>
+            <h2 className={styles.container__heading}>Other Results</h2>
+          </div>
+
+          <div>
+            <label for='numOfData'>Number Of Data:</label>
+
+            <select
+              name='numOfData'
+              id='numOfData'
+              onChange={(e) => {
+                setNumberOfAddition(e.target.value);
+              }}
+            >
+              <option value='3'>3</option>
+              <option value='6'>6</option>
+              <option value='9'>9</option>
+              <option value='12'>12</option>
+              <option value='15'>15</option>
+              <option value='15'>All</option>
+            </select>
+          </div>
+
+          <div>
+            <button
+              className={styles.header__button}
+              onClick={() => setModalClicked(true)}
+            >
+              <BsDownload className={styles['button__icon']} />
+              Download Results
+            </button>
+          </div>
+        </article>
 
         <div className={styles['container-other-result']}>
-          {dummyData.map((data, i) => (
-            <article className={styles['container-other-result__wrapper']}>
+          {dummyData.slice(0, numberOfData).map((data, i) => (
+            <article
+              className={styles['container-other-result__wrapper']}
+              onClick={() => {
+                setCurrentDataIndex(i);
+              }}
+              key={i}
+            >
               <div className={styles['container-other-result__wrapper-left']}>
                 <h3>{data.percentage}%</h3>
               </div>
               <div className={styles['container-other-result__wrapper-right']}>
+                <h4>{data.tag}</h4>
                 <h3>{data.name}</h3>
               </div>
             </article>
           ))}
-          {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          accumsan at tortor at gravida. Nulla at metus massa. Duis vestibulum
-          interdum sagittis. Ut at feugiat lorem. Class aptent taciti sociosqu
-          ad litora torquent per conubia nostra, per inceptos himenaeos. Nam
-          rutrum nec lacus sed malesuada. Nunc imperdiet accumsan ipsum quis
-          egestas. Maecenas malesuada luctus libero, */}
-          {/* <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia</h3>
-            </div>
-          </article>
-
-          <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia hello asd asd asd </h3>
-            </div>
-          </article>
-
-          <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia</h3>
-            </div>
-          </article>
-
-          <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia</h3>
-            </div>
-          </article>
-
-          <article className={styles['container-other-result__wrapper']}>
-            <div className={styles['container-other-result__wrapper-left']}>
-              <h3>50%</h3>
-            </div>
-            <div className={styles['container-other-result__wrapper-right']}>
-              <h3>Leukimia</h3>
-            </div>
-          </article> */}
         </div>
         <div
           className={styles.container__footer}
-          onClick={(e) => setModalClicked(true)}
+          onClick={() => {
+            if (numberOfData > dummyData.length) {
+              console.log('Full');
+            } else {
+              setNumberOfData(Number(numberOfData) + Number(NumberOfAddition));
+            }
+            console.log('numberOfData', numberOfData);
+          }}
         >
           <h3 className={styles['container-footer__title']}>
             See more results{' '}
@@ -189,7 +260,7 @@ function Result() {
               value='Yes'
               className={styles['wrapper__radio-button']}
             />
-            <label for='yes' className={styles.wrapper__label}>
+            <label htmlFor='yes' className={styles.wrapper__label}>
               Yes
             </label>
             <input
@@ -200,7 +271,7 @@ function Result() {
               className={styles['wrapper__radio-button']}
               defaultChecked
             />
-            <label for='no' className={styles.wrapper__label}>
+            <label htmlFor='no' className={styles.wrapper__label}>
               No
             </label>
           </div>
@@ -219,6 +290,8 @@ function Result() {
           modalOpen={modalClicked}
           setModalOpen={setModalClicked}
           title='All Result'
+          data={dummyData[currentDataIndex]}
+          variant='download'
         />
       )}
     </main>
