@@ -3,6 +3,7 @@ import Button from '../../components/Button/Button';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 import styles from './Home.module.css';
+import home_image from '../../Images/home_image.png';
 
 function Home() {
   return (
@@ -16,8 +17,12 @@ function Home() {
           </div>
           <div>
             <p>
-              Welcome to Disease Tracker, this is a sophisticated and intuitive
-              tool that you can always rely on whenever you’re in a pinch!
+              Welcome to{' '}
+              <span className={styles['description--highlight']}>
+                Disease Tracker
+              </span>
+              , this is a sophisticated and intuitive tool that you can always
+              rely on whenever you’re in a pinch!
             </p>
             <p>
               To start off, please write down the symptoms that you have been
@@ -25,7 +30,9 @@ function Home() {
             </p>
           </div>
         </artivle>
-        <div className={styles.circle}></div>
+        <div className={styles['image_wrapper']}>
+          <img className={styles.image} src={home_image} alt='' />
+        </div>
       </section>
 
       <section className={styles.container + ' ' + styles.section__features}>
