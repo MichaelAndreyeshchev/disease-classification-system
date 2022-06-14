@@ -206,6 +206,7 @@ function Result() {
             <article
               className={styles['container-other-result__wrapper']}
               onClick={() => {
+                setModalClicked(true);
                 setCurrentDataIndex(i);
               }}
               key={i}
@@ -291,7 +292,7 @@ function Result() {
           setModalOpen={setModalClicked}
           title='All Result'
           data={dummyData[currentDataIndex]}
-          variant='download'
+          // variant='download'
         />
       )}
     </main>
