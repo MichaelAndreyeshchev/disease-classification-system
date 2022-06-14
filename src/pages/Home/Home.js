@@ -8,10 +8,23 @@ function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.container + ' ' + styles.section__home}>
-        <div className={styles.wrapper}>
-          <h1 className={styles.wrapper__title}>Welcome to Disease Detector</h1>
-          <Button text="Let's Explore" />
-        </div>
+        <artivle className={styles.wrapper}>
+          <div>
+            <h1 className={styles.wrapper__title}>
+              Don’t worry, We always got you covered!
+            </h1>
+          </div>
+          <div>
+            <p>
+              Welcome to Disease Tracker, this is a sophisticated and intuitive
+              tool that you can always rely on whenever you’re in a pinch!
+            </p>
+            <p>
+              To start off, please write down the symptoms that you have been
+              experienced below.
+            </p>
+          </div>
+        </artivle>
         <div className={styles.circle}></div>
       </section>
 
