@@ -6,6 +6,7 @@
 
   width: 100%;
   min-height: 100vh;
+  font-family: 'Inter', 'sans-serif';
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
   border: 1px solid red;
@@ -27,9 +28,38 @@
   padding-left: 2em;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  border: 1px solid blue;
+}
+
+.wrapper--row {
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3em;
+}
+
 .wrapper__title {
-  font-size: clamp(2rem, 15vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  max-width: 700px;
+  font-family: 'Nunito', 'sans-serif';
+  font-weight: 700;
   margin-bottom: 0.5em;
+}
+
+.wrapper__description {
+  width: 550px;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  /* font-size: 20px; */
+  margin: 1em 0;
+}
+
+.image {
+  width: 47vw;
+  height: 47vw;
 }
 
 .section__features {
@@ -47,49 +77,66 @@
   background: none;
 }
 
-.description--highlight {
+.text-highlight {
+  font-weight: 700;
   color: #09ac91;
 }
 
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 450px;
+  height: 450px;
+  padding: 0 3em 2em;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 3px solid #000000;
+  transition: 0.3s all ease-in-out;
+
+  border-radius: 10px;
+}
+
+.option:hover {
+  box-shadow: -15px 15px 0px #09ac91, -30px 30px 0px #ffd873,
+    -45px 45px 0px #000000;
+}
+
+.option--right:hover {
+  box-shadow: 15px 15px 0px #09ac91, 30px 30px 0px #ffd873,
+    45px 45px 0px #000000;
+}
+
+.option__image {
+  width: 320px;
+  height: 320px;
+  /* border: 1px solid red; */
+}
+
+.option__title {
+  margin: -0.5em 0 0.5em;
+  font-size: 1.8rem;
+  /* border: 1px solid red; */
+}
+
+.option__description {
+  font-size: 0.9rem;
+  /* border: 1px solid red; */
+}
+
 @media screen and (min-width: 1024px) {
-  .wrapper__title {
-    font-size: clamp(2rem, 15vw, 3.5rem);
-  }
-
   .section__features {
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 1em;
-  }
-
-  .container__wrapper {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex: 1;
-
-    min-height: 100vh;
-
-    border: 1px solid red;
+    justify-content: end;
+    padding-bottom: 1em;
   }
 
   .image_wrapper {
     justify-self: flex-end;
     align-self: flex-end;
-  }
-
-  .image {
-    width: 47vw;
-    height: 47vw;
-    /* width: 800px; */
-    /* height: 800px; */
-  }
-
-  .wrapper--left {
-    background: url('../../Images/Rectangle\ 9.jpg');
-  }
-
-  .wrapper--right {
-    background: url('../../Images/Rectangle\ 8.jpg');
   }
 }
