@@ -37,7 +37,10 @@ function Home() {
       </section>
 
       <section className={styles.container + ' ' + styles.section__features}>
-        <h2>Tell us your preferred way to get your disease diagnosed</h2>
+        {/* <div></div> */}
+        <h2 className={styles.wrapper__title + ' ' + styles['title--small']}>
+          Tell us your preferred way to get your disease diagnosed
+        </h2>
         <article className={styles.wrapper + ' ' + styles['wrapper--row']}>
           <div className={styles.option}>
             <img className={styles.option__image} src={text_option} alt='' />
