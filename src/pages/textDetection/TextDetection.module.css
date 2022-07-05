@@ -2,41 +2,102 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   width: 100%;
   min-height: 100vh;
-  padding-top: 2em;
+  padding: 2em 4em;
+  position: relative;
 
-  background: #c4c4c4;
+  background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
   border: 1px solid red;
+}
+
+.container {
+  z-index: 2;
+}
+
+.title {
+  width: 950px;
+  margin: 1em 0;
+
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+
+  color: #000000;
+}
+
+.title__highlight {
+  color: #3ee7ba;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: clamp(18.7rem, 60vw, 40rem);
-  padding: 2em;
-  background: #fff;
-  border-radius: 30px;
+  width: clamp(18.7rem, 60vw, 50rem);
+  padding: 2em 1em;
 
+  border: 1px solid red;
+  background: #e3fff1;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+
+  z-index: 100;
+}
+
+.modal__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
   border: 1px solid red;
 }
 
 .modal__label {
-  font-size: 1.5rem;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 123% */
+
+  color: #09ac91;
+}
+
+.label--black {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .modal__input {
   width: 100%;
   resize: none;
-  margin: 1em 0;
+  margin: 1em 0 2em;
   padding: 1em;
 
-  background: #e0e0e0;
-  border: 0;
   border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #09ac91;
+
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.modal__input::placeholder {
+  color: #e0e0e0;
+  opacity: 1;
+}
+
+.modal__input:-ms-input-placeholder {
+  color: #e0e0e0;
+}
+
+.modal__input::-ms-input-placeholder {
+  color: #e0e0e0;
 }
 
 .error-container {
@@ -52,17 +113,34 @@
 }
 
 .modal__button {
-  align-self: flex-end;
-  padding: 1em 2em;
+  width: 100%;
+  padding: 0.5em;
 
   font-size: clamp(0.85rem, 3vw, 1rem);
-  background: #4d9eea;
-  color: #fff;
-  border: 0;
+  font-weight: 700;
+  line-height: 32px;
 
-  border-radius: 100px;
+  background: #3ee7ba;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  color: #000;
+  transition: 0.2s all ease-in-out;
+
+  opacity: 0.3;
 }
 
-.modal__button:hover {
-  filter: brightness(0.9);
+.button--active {
+  opacity: 1;
+}
+
+.button--active:hover {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45rem;
+  z-index: 0;
 }
