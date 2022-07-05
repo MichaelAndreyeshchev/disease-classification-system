@@ -34,6 +34,7 @@ function TextDetection() {
     e.preventDefault();
     if (!error) {
       setSymptomps('');
+      setIsButtonActive(false);
     }
   };
 
