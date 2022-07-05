@@ -34,8 +34,7 @@
 }
 
 .wrapper--row {
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 3em;
   margin-bottom: auto;
 }
@@ -49,7 +48,7 @@
 }
 
 .title--small {
-  font-size: 45px;
+  font-size: clamp(2rem, 2.7vw, 3rem);
   text-align: center;
   margin: auto 0 1em;
 }
@@ -93,6 +92,7 @@
   width: 450px;
   height: 450px;
   padding: 0 3em 2em;
+  margin: 1em 0;
 
   text-align: center;
 
@@ -116,18 +116,15 @@
 .option__image {
   width: 320px;
   height: 320px;
-  /* border: 1px solid red; */
 }
 
 .option__title {
   margin: -0.5em 0 0.5em;
   font-size: 1.8rem;
-  /* border: 1px solid red; */
 }
 
 .option__description {
   font-size: 0.9rem;
-  /* border: 1px solid red; */
 }
 
 @media screen and (min-width: 1024px) {
@@ -141,5 +138,12 @@
   .image_wrapper {
     justify-self: flex-end;
     align-self: flex-end;
+  }
+
+  .wrapper--row {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3em;
+    margin-bottom: auto;
   }
 }
