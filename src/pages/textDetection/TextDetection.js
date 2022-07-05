@@ -32,8 +32,9 @@ function TextDetection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    setSymptomps('');
+    if (!error) {
+      setSymptomps('');
+    }
   };
 
   return (
