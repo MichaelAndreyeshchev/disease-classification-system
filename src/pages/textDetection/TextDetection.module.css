@@ -18,14 +18,12 @@
 }
 
 .title {
-  width: 950px;
   margin: 1em 0;
 
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
-  font-size: 43px;
-
+  font-size: clamp(1.3rem, 5vw, 2.7rem);
   color: #000000;
 }
 
@@ -151,4 +149,10 @@
   right: 0;
   width: 45rem;
   z-index: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    width: clamp(30rem, 60vw, 59rem);
+  }
 }
