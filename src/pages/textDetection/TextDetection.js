@@ -15,13 +15,12 @@ function TextDetection() {
       .split(',')
       .map((val) => val.trim())
       .filter((val) => val.length > 0);
-    console.log('adfads', userInput);
-    console.log('helo');
+
     if (!textArea.current.value) {
-      setError('Please list your symptoms');
+      setError('Please list your symptoms!');
       setIsButtonActive(false);
     } else if (userInput.length < 5) {
-      setError('Please list more than 5 symptoms');
+      setError('Please list more than 5 symptoms!');
       setIsButtonActive(false);
     } else {
       console.log(userInput);
@@ -73,7 +72,9 @@ function TextDetection() {
             value={symptomps}
             onChange={(e) => handleChange(e.target.value)}
             rows='13'
-            className={styles.modal__input}
+            className={
+              styles.modal__input + ' ' + (error && styles['input--error'])
+            }
           ></textarea>
           <input
             type='submit'

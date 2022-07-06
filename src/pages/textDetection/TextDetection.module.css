@@ -40,7 +40,6 @@
   width: clamp(18.7rem, 60vw, 50rem);
   padding: 2em 1em;
 
-  border: 1px solid red;
   background: #e3fff1;
   border: 1px solid #000000;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
@@ -54,7 +53,7 @@
   justify-content: space-between;
 
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .modal__label {
@@ -100,16 +99,25 @@
   color: #e0e0e0;
 }
 
+.input--error {
+  background: #ffeceb;
+  border: 1px solid #f15d4a;
+}
+
 .error-container {
   display: flex;
   align-items: center;
   margin: 0.4em 0;
+
   font-size: clamp(0.95rem, 3vw, 1.05rem);
-  color: hsl(0, 100%, 50%);
+  color: #ff5953;
 }
 
 .error-container__message {
   margin-left: 0.3em;
+  font-family: 'Nunito';
+  font-weight: 700;
+  line-height: 32px;
 }
 
 .modal__button {
