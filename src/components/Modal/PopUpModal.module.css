@@ -60,6 +60,10 @@
   width: 192px;
   height: 60px;
 
+  background: hsl(0, 0%, 100%);
+  border: 1px solid #000000;
+  border-radius: 10px;
+
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
@@ -69,4 +73,8 @@
   text-align: center;
 
   color: #000000;
+}
+
+.modal__button:hover {
+  background: hsl(0, 0%, 95%);
 }
