@@ -1,27 +1,40 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import styles from './TextDetection.module.css';
 import textDetectionImage from '../../Images/health-sick1.png';
+import PopUpModal from '../../components/Modal/PopUpModal';
 
 function TextDetection() {
   const [symptomps, setSymptomps] = useState('');
   const [error, setError] = useState('');
-  let textArea = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const userInput = textArea.current.value
+  const handleSubmit = () => {
+    const userInput = symptomps
       .split(',')
       .map((val) => val.trim())
       .filter((val) => val.length > 0);
 
-    if (!textArea.current.value) {
+    if (!symptomps) {
       setError('Please list your symptoms!');
+      onOpenModal();
     } else if (userInput.length < 5) {
       setError('Please list more than 5 symptoms!');
+      onOpenModal();
     } else {
       console.log(userInput);
       setError('');
+      setSymptomps('');
     }
   };
 
+  const onOpenModal = () => {
+    document.body.style.overflow = 'hidden';
+    setIsModalOpen(true);
+  };
+
+  const onCloseModal = () => {
+    document.body.style.overflow = 'unset';
+    setIsModalOpen(false);
   };
 
   return (
@@ -47,9 +60,8 @@ function TextDetection() {
             name='symptoms'
             id='symptopms'
             placeholder='Shortness of breath, headache, severe cold'
-            ref={textArea}
             value={symptomps}
-            onChange={(e) => handleChange(e.target.value)}
+            onChange={(e) => setSymptomps(e.target.value)}
             rows='13'
             className={
               styles.modal__input + ' ' + (error && styles['input--error'])
@@ -57,12 +69,20 @@ function TextDetection() {
           ></textarea>
           <input
             type='submit'
+            className={styles.modal__button}
             onClick={handleSubmit}
             value='Detect my disease'
           />
         </article>
       </article>
       <img className={styles.image} src={textDetectionImage} alt='' />
+      {error && (
+        <PopUpModal
+          text={error}
+          isModalOpen={isModalOpen}
+          onClose={onCloseModal}
+        />
+      )}
     </main>
   );
 }
