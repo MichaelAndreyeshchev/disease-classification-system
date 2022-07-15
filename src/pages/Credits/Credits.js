@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Credits.module.css';
 
-import TestiMonials from '../../components/TestiMonials/TestiMonials';
+import TestiMonial from '../../components/TestiMonial/TestiMonial';
 import Card from '../../components/Card/Card';
 
 const Credits = () => {
@@ -9,7 +9,7 @@ const Credits = () => {
     <main className={styles.main}>
       <section className={styles.section}>
         <h1 className={styles.section__title}>Our Resources</h1>
-        <TestiMonials />
+        <TestiMonial />
       </section>
       <section className={styles.section}>
         <h2 className={styles.section__title}>Meet the Team</h2>

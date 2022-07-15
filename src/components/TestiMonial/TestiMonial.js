@@ -8,11 +8,11 @@ import {
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './TestiMonials.css';
+import './TestiMonial.css';
 
 import Modal from '../Modal/Modal';
 
-const TestiMonials = () => {
+const TestiMonial = () => {
   const [modalClicked, setModalClicked] = useState(false);
   const [currentCardPosition, setCurrentCardPosition] = useState(0);
   let carousel = useRef(null);
@@ -155,4 +155,4 @@ const TestiMonials = () => {
   );
 };
 
-export default TestiMonials;
+export default TestiMonial;
