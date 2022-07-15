@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails';
+import TestiMonialDetail from '../TestiMonialDetail/TestiMonialDetail';
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
@@ -99,7 +99,7 @@ const TestiMonial = () => {
               >
                 {testiMonials.map((testiMonialDetail, i) => {
                   return (
-                    <TestiMonialsDetails
+                    <TestiMonialDetail
                       testiMonialDetail={testiMonialDetail}
                       key={i}
                       position={i}

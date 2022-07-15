@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-const TestiMonialsDetails = ({
+const TestiMonialDetail = ({
   testiMonialDetail,
   setModalOpen,
   position,
@@ -27,4 +27,4 @@ const TestiMonialsDetails = ({
   );
 };
 
-export default TestiMonialsDetails;
+export default TestiMonialDetail;
