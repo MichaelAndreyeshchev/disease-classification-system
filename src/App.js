@@ -13,8 +13,7 @@ import Result from './pages/Result/Result';
 import Contact from './pages/Contact/Contact';
 import Sidebar from './components/Sidebar';
 import Credits from './pages/Credits/Credits';
-import TestiMonials from './components/TestiMonials/TestiMonials';
-import reactDom from 'react-dom';
+import TestiMonial from './components/TestiMonial/TestiMonial';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +32,7 @@ function App() {
         <Route path={ROUTES.IMAGE_INDIVIDUAL} element={<DropFileInput />} />
         <Route path={ROUTES.IMAGE_FOLDER} element={<FolderDetection />} />
         <Route path={ROUTES.TEXT_DETECTION} element={<TextDetection />} />
-        <Route path='/testimonials' element={<TestiMonials />} />
+        <Route path='/testimonials' element={<TestiMonial />} />
         <Route path={ROUTES.RESULT} element={<Result />} />
         <Route path={ROUTES.CONTACT} element={<Contact />} />
         <Route path={ROUTES.CREDITS} element={<Credits />} />
