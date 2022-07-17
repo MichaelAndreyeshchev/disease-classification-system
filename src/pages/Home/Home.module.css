@@ -20,6 +20,10 @@
   border: 1px solid red;
 }
 
+.container:first-child {
+  min-height: calc(100vh - 80px);
+}
+
 .section__home {
   flex-direction: row;
   justify-content: space-between;
