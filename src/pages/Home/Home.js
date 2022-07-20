@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 import styles from './Home.module.css';
-import home_image from '../../Images/home_image2.png';
+import home_image from '../../Images/home_image.png';
 import text_option from '../../Images/text_option.png';
 import image_option from '../../Images/image_option.png';
 
@@ -11,7 +11,7 @@ function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.container + ' ' + styles.section__home}>
-        <artivle className={styles.wrapper}>
+        <article className={styles.wrapper}>
           <div>
             <h1 className={styles.wrapper__title}>
               Don’t worry, We always got you{' '}
@@ -30,14 +30,13 @@ function Home() {
               experienced below.
             </p>
           </div>
-        </artivle>
+        </article>
         <div className={styles['image_wrapper']}>
           <img className={styles.image} src={home_image} alt='' />
         </div>
       </section>
 
       <section className={styles.container + ' ' + styles.section__features}>
-        {/* <div></div> */}
         <h2 className={styles.wrapper__title + ' ' + styles['title--small']}>
           Tell us your preferred way to get your disease diagnosed
         </h2>
