@@ -51,7 +51,7 @@ class TextDetection extends Component {
         <article className={styles.container}>
           <h2 className={styles.title}>
             Please list down all of the{' '}
-            <span className={styles.title__highlight}>symptoms</span> that you
+            <span className={styles.title_highlight}>symptoms</span> that you
             are currently experiencing
           </h2>
           <article className={styles.modal}>

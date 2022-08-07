@@ -6,6 +6,7 @@ import styles from './Home.module.css';
 import home_image from '../../Images/home_image.png';
 import text_option from '../../Images/text_option.png';
 import image_option from '../../Images/image_option.png';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
           <div>
             <h1 className={styles.wrapper__title}>
               Don’t worry, We always got you{' '}
-              <span className={styles['text-highlight']}>covered</span>!
+              <span className={styles['text_highlight']}>covered</span>!
             </h1>
           </div>
           <div>
@@ -40,23 +41,28 @@ function Home() {
         <h2 className={styles.wrapper__title + ' ' + styles['title--small']}>
           Tell us your preferred way to get your disease diagnosed
         </h2>
+
         <article className={styles.wrapper + ' ' + styles['wrapper--row']}>
-          <div className={styles.option}>
-            <img className={styles.option__image} src={text_option} alt='' />
-            <h3 className={styles.option__title}>Write down symptoms</h3>
-            <p className={styles.option__description}>
-              Tell us every symptom that you are currently facing in the
-              provided textbox.
-            </p>
-          </div>
-          <div className={styles.option + ' ' + styles['option--right']}>
-            <img className={styles.option__image} src={image_option} alt='' />
-            <h3 className={styles.option__title}>Upload images of disease</h3>
-            <p className={styles.option__description}>
-              Upload every picture that is related to the disease you are
-              currently hosting.
-            </p>
-          </div>
+          <Link to={ROUTES.TEXT_DETECTION} className={styles['option_link']}>
+            <div className={styles.option}>
+              <img className={styles.option__image} src={text_option} alt='' />
+              <h3 className={styles.option__title}>Write down symptoms</h3>
+              <p className={styles.option__description}>
+                Tell us every symptom that you are currently facing in the
+                provided textbox.
+              </p>
+            </div>
+          </Link>
+          <Link to={ROUTES.IMAGE_INDIVIDUAL} className={styles['option_link']}>
+            <div className={styles.option + ' ' + styles['option--right']}>
+              <img className={styles.option__image} src={image_option} alt='' />
+              <h3 className={styles.option__title}>Upload images of disease</h3>
+              <p className={styles.option__description}>
+                Upload every picture that is related to the disease you are
+                currently hosting.
+              </p>
+            </div>
+          </Link>
         </article>
       </section>
     </main>

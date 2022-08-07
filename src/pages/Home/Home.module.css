@@ -83,7 +83,7 @@
   background: none;
 }
 
-.text-highlight {
+.text_highlight {
   font-weight: 700;
   color: #09ac91;
 }
@@ -99,12 +99,17 @@
   margin: 1em 0;
 
   text-align: center;
+  color: #000;
 
   background: #ffffff;
   border: 3px solid #000000;
   transition: 0.3s all ease-in-out;
 
   border-radius: 10px;
+}
+
+.option_link {
+  text-decoration: none;
 }
 
 .option__image {

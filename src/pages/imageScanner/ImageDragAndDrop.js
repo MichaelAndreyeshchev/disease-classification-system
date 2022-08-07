@@ -2,10 +2,11 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './drop-file-input.module.css';
-import uploadImg from '../../assets/cloud-upload-regular-240.png';
+import uploadImg from '../../Images/Icon.png';
 
 const DropFileInput = (props) => {
   const inputRef = useRef(null);
+  const [fileDatas, setFileDatas] = useState([]);
   const [isDragged, setIsDragged] = useState(false);
   const [isDisabled, setIsDisabled] = useState(true);
 
@@ -32,8 +33,18 @@ const DropFileInput = (props) => {
     setTimeout(() => {
       setIsDisabled(true);
     }, 300);
-    const newFile = e.target.files[0];
-    console.log(newFile.name);
+    console.log(e.target.files);
+    console.log(typeof e.target.files);
+    let files = [];
+    for (let i = 0; i < e.target.files.length; i++) {
+      console.log(e.target.files[i].name);
+      files.push(e.target.files[i]);
+    }
+    console.log('---------------------');
+    console.log(files);
+    // const newFile = e.target.files;
+    // console.log(newFile);
+    // console.log(newFile.name);
   };
 
   const handleClick = () => {
@@ -44,40 +55,65 @@ const DropFileInput = (props) => {
     }, 300);
   };
 
+  const handleSubmit = () => {};
+
   return (
-    <>
-      <main
-        className={styles.container + ' ' + (isDragged ? styles.dragover : ' ')}
+    <main className={styles.main + ' ' + (isDragged ? styles.dragover : ' ')}>
+      <article className={styles.wrapper}>
+        <h1 className={styles.title}>
+          Please <span className={styles.title_highlight}>take pictures</span>{' '}
+          of your current condition and upload them down below.
+        </h1>
+        <p className={styles.description}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla enim
+          amet, maecenas ac. Ipsum mauris tortor nulla ultrices quisque dictum.
+          At odio consequat tellus mauris ullamcorper sed. Nibh non interdum
+          cursus ornare pretium ut.
+        </p>
+      </article>
+      <div
+        className={styles['drop-file-input']}
+        onDragEnter={onDragEnter}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
       >
         <div
-          className={styles['drop-file-input']}
-          onDragEnter={onDragEnter}
-          onDragLeave={onDragLeave}
-          onDrop={onDrop}
+          className={
+            styles['drop-file-input__wrapper'] +
+            ' ' +
+            (isDragged ? styles['label-dragover'] : ' ')
+          }
+          onClick={handleClick}
         >
-          <div
-            className={
-              styles['drop-file-input__wrapper'] +
-              ' ' +
-              (isDragged ? styles['label-dragover'] : ' ')
-            }
-            onClick={handleClick}
+          <img src={uploadImg} alt='' className={styles.wrapper__image} />
+          <h2 className={styles.title + ' ' + styles['title--small']}>
+            Drag and drop a{' '}
+            <span className={styles['highlight--blue']}>file</span> or a{' '}
+            <span className={styles['highlight--blue']}>folder</span>. Or{' '}
+            <span className={styles['highlight--pink']}>
+              browse your device
+            </span>
+          </h2>
+          <p
+            className={styles.description + ' ' + styles['description--small']}
           >
-            <img src={uploadImg} alt='' className={styles.wrapper__image} />
-            <p>Drag & Drop your Images here</p>
-            <p>or</p>
-            <p>Click to browse your file</p>
-          </div>
-          <input
-            ref={inputRef}
-            type='file'
-            value=''
-            onChange={onFileDrop}
-            disabled={isDisabled}
-          />
+            supports .jpg and .png for file upload
+          </p>
         </div>
-      </main>
-    </>
+        <input
+          ref={inputRef}
+          type='file'
+          value=''
+          onChange={onFileDrop}
+          disabled={isDisabled}
+          className={styles.input}
+          multiple
+        />
+        <button className={styles.modal__button} onClick={handleSubmit}>
+          Detect my disease
+        </button>
+      </div>
+    </main>
   );
 };
 
