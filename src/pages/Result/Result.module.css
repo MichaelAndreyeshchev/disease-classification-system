@@ -38,10 +38,7 @@
   color: #ffffff;
   position: relative;
   height: 1347px;
-  /* background: url('../../Images/Vector 10.png'); */
-  /* background-size: cover; */
-  /* background-position: ; */
-  /* background-repeat: no-repeat; */
+  margin-top: 10em;
 }
 
 .container__background {
@@ -51,11 +48,20 @@
   position: absolute;
 }
 
-.container_header {
+.container__image {
+  position: absolute;
+  width: 580px;
+  top: -30%;
+  right: 6%;
+  border: 1px solid blue;
+}
+
+.container__header {
   display: flex;
   justify-content: space-between;
   width: 100%;
   border: 1px solid red;
+  margin-bottom: 1.5em;
 }
 
 .header__button {
@@ -90,7 +96,7 @@
 .container__heading {
   font-size: clamp(1.6rem, 3vw, 3.5rem);
   font-weight: 700;
-  line-height: 95px;
+  margin-bottom: 2rem;
 }
 
 .container__result {
@@ -147,9 +153,19 @@
   margin-bottom: 3em;
 }
 
+.no--margin {
+  margin: 0;
+}
+
 .container--result {
+  width: 84%;
+  padding: 2em 3em;
   border: 1px solid green;
   margin-bottom: 2em;
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .container__footer {

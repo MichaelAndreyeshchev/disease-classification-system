@@ -6,6 +6,7 @@ import styles from './Result.module.css';
 import { BsFillArrowDownCircleFill, BsDownload } from 'react-icons/bs';
 import Modal from '../../components/Modal/Modal';
 import background from '../../Images/Vector 10.png';
+import healthCheck from '../../Images/Layer 2.png';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
@@ -152,6 +153,7 @@ function Result() {
       <article
         className={styles.container + ' ' + styles['container--background']}
       >
+        <img className={styles.container__image} src={healthCheck} alt='' />
         <img className={styles.container__background} src={background} alt='' />
         <div className={styles.wrapper}>
           <h2 className={styles.container__heading}>What is Tuberculosis?</h2>
@@ -201,9 +203,19 @@ function Result() {
       </article>
 
       <article className={styles.container + ' ' + styles['container--result']}>
-        <article className={styles['container_header']}>
+        <article className={styles['container__header']}>
           <div>
-            <h2 className={styles.container__heading}>Other Results</h2>
+            <h2 className={styles.container__heading}>Other Top Results</h2>
+            <p
+              className={
+                styles.container__description + ' ' + styles['no--margin']
+              }
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              enim amet, maecenas ac. Ipsum mauris tortor nulla ultrices quisque
+              dictum. At odio consequat tellus mauris ullamcorper sed. Nibh non
+              interdum cursus ornare pretium ut.
+            </p>
           </div>
 
           <div>
