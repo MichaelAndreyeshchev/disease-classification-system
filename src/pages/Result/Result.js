@@ -7,6 +7,8 @@ import { BsFillArrowDownCircleFill, BsDownload } from 'react-icons/bs';
 import Modal from '../../components/Modal/Modal';
 import background from '../../Images/Vector 10.png';
 import healthCheck from '../../Images/Layer 2.png';
+import { AiFillQuestionCircle } from 'react-icons/ai';
+import ProgressBar from '@ramonak/react-progress-bar';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
@@ -249,7 +251,7 @@ function Result() {
         </article>
 
         <div className={styles['container-other-result']}>
-          {dummyData.slice(0, numberOfData).map((data, i) => (
+          {/* {dummyData.slice(0, numberOfData).map((data, i) => (
             <article
               className={styles['container-other-result__wrapper']}
               onClick={() => {
@@ -266,7 +268,22 @@ function Result() {
                 <h3>{data.name}</h3>
               </div>
             </article>
-          ))}
+          ))} */}
+
+          <article className={styles.card}>
+            <div className={styles.card__wrapper}>
+              <h2 className={styles.card__heading}>83%</h2>
+            </div>
+            <div className={styles.card__wrapper}>
+              <h3 className={styles.card__subheading}>Leukimia</h3>
+              <AiFillQuestionCircle />
+
+              {/* 
+                https://www.npmjs.com/package/@ramonak/react-progress-bar#examples 
+              */}
+              <ProgressBar completed={83} customLabel=' ' />
+            </div>
+          </article>
         </div>
         <div
           className={styles.container__footer}

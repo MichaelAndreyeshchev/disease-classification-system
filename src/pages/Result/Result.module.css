@@ -208,14 +208,27 @@
   z-index: 10;
 }
 
-.container-other-result__wrapper {
+.card {
   display: flex;
-  flex: 1 1 30%;
-  margin: 1rem;
+  width: 100%;
+  margin: 1rem 0;
   height: 70px;
 
-  background: #fff;
-  border-radius: 10px;
+  padding: 0.5em 0;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.card__wrapper {
+  display: flex;
+  flex: 40%;
+  border: 1px solid red;
+}
+
+.card__heading {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .container-other-result__wrapper h3 {
