@@ -8,7 +8,8 @@ import Modal from '../../components/Modal/Modal';
 import background from '../../Images/Vector 10.png';
 import healthCheck from '../../Images/Layer 2.png';
 import { AiFillQuestionCircle } from 'react-icons/ai';
-import ProgressBar from '@ramonak/react-progress-bar';
+// import ProgressBar from '@ramonak/react-progress-bar';
+import ProgressBar from '../../components/ProgressBar/ProgressBar';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
@@ -238,16 +239,6 @@ function Result() {
               <option value='15'>All</option>
             </select>
           </div>
-
-          <div>
-            <button
-              className={styles.header__button}
-              onClick={() => setModalClicked(true)}
-            >
-              <BsDownload className={styles['button__icon']} />
-              Download Results
-            </button>
-          </div>
         </article>
 
         <div className={styles['container-other-result']}>
@@ -271,17 +262,23 @@ function Result() {
           ))} */}
 
           <article className={styles.card}>
-            <div className={styles.card__wrapper}>
+            <div>
               <h2 className={styles.card__heading}>83%</h2>
             </div>
             <div className={styles.card__wrapper}>
               <h3 className={styles.card__subheading}>Leukimia</h3>
-              <AiFillQuestionCircle />
-
-              {/* 
-                https://www.npmjs.com/package/@ramonak/react-progress-bar#examples 
-              */}
-              <ProgressBar completed={83} customLabel=' ' />
+              <AiFillQuestionCircle className={styles.card__icon} />
+              <ProgressBar progress='83' />
+            </div>
+          </article>
+          <article className={styles.card}>
+            <div>
+              <h2 className={styles.card__heading}>74%</h2>
+            </div>
+            <div className={styles.card__wrapper}>
+              <h3 className={styles.card__subheading}>Lung Cancer</h3>
+              <AiFillQuestionCircle className={styles.card__icon} />
+              <ProgressBar progress='74' />
             </div>
           </article>
         </div>
@@ -296,12 +293,13 @@ function Result() {
             console.log('numberOfData', numberOfData);
           }}
         >
-          <h3 className={styles['container-footer__title']}>
-            See more results{' '}
-          </h3>{' '}
-          <BsFillArrowDownCircleFill
-            className={styles['container-footer__icon']}
-          />
+          <button className={styles.footer__button}>Show more results</button>
+          <button
+            className={styles.footer__button + ' ' + styles['button--grey']}
+            onClick={() => setModalClicked(true)}
+          >
+            Download Results
+          </button>
         </div>
       </article>
 
