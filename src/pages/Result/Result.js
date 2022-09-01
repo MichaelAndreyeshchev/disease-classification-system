@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 
 import styles from './Result.module.css';
-import { BsFillArrowDownCircleFill, BsDownload } from 'react-icons/bs';
 import Modal from '../../components/Modal/Modal';
 import background from '../../Images/Vector 10.png';
 import healthCheck from '../../Images/Layer 2.png';
 import { AiFillQuestionCircle } from 'react-icons/ai';
-// import ProgressBar from '@ramonak/react-progress-bar';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import background2 from '../../Images/health-meditation 1.png';
+import { Link } from 'react-router-dom';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
@@ -334,46 +333,46 @@ function Result() {
       <section
         className={styles.container + ' ' + styles['container--collect-data']}
       >
-        <div>
-          <h2
+        <div className={styles.wrapper + ' ' + styles['wrapper--center']}>
+          <img
+            className={styles.container__image + ' ' + styles['image--center']}
+            src={background2}
+            alt=''
+          />
+          <h3
+            className={styles.container__heading + ' ' + styles['text--center']}
+          >
+            Support us by contributing
+          </h3>
+          <p
             className={
-              styles.container__heading + ' ' + styles['heading--collect-data']
+              styles.container__description +
+              ' ' +
+              styles['description--center']
             }
           >
-            Can we collect your data for improving our algorithm to provide you
-            with the best service?
-          </h2>
-          <div className={styles['wrapper-collect-data']}>
-            <input
-              type='radio'
-              id='yes'
-              name='collect_data'
-              value='Yes'
-              className={styles['wrapper__radio-button']}
-            />
-            <label htmlFor='yes' className={styles.wrapper__label}>
-              Yes
-            </label>
-            <input
-              type='radio'
-              id='no'
-              name='collect_data'
-              value='No'
-              className={styles['wrapper__radio-button']}
-              defaultChecked
-            />
-            <label htmlFor='no' className={styles.wrapper__label}>
-              No
-            </label>
-          </div>
+            First of all, thank you for using our service! However, if you find
+            our service helpful and insightful, you can always further improve
+            our system by contributing and let us storing your prefilled data to
+            our database.
+          </p>
+          <button className={styles.container__button}>
+            I allow the developers to collect my data!
+          </button>
         </div>
 
-        <LinkCustom
-          to={ROUTES.IMAGE_INDIVIDUAL}
-          text='Detect Again'
-          iconPosition='right'
-          size='big'
-        />
+        <div className={styles.circle}></div>
+      </section>
+
+      <section className={styles.container + ' ' + styles['container--detect']}>
+        <h2
+          className={styles.container__heading + ' ' + styles['heading--white']}
+        >
+          Unsure or have another disease to track?
+        </h2>
+        <Link to={ROUTES.IMAGE_INDIVIDUAL} className={styles.container__link}>
+          Detect Again
+        </Link>
       </section>
 
       {modalClicked && (
