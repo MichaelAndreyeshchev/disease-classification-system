@@ -153,7 +153,7 @@ function Result() {
       </section>
 
       <section
-        className={styles.container + ' ' + styles['container--background']}
+        className={styles.container + ' ' + styles['container--description']}
       >
         <img className={styles.container__image} src={healthCheck} alt='' />
         <img className={styles.container__background} src={background} alt='' />
@@ -266,26 +266,43 @@ function Result() {
           </article>
 
           <div className={styles['container-other-result']}>
-            {/* {dummyData.slice(0, numberOfData).map((data, i) => (
-            <article
-              className={styles['container-other-result__wrapper']}
-              onClick={() => {
-                setModalClicked(true);
-                setCurrentDataIndex(i);
-              }}
-              key={i}
-            >
-              <div className={styles['container-other-result__wrapper-left']}>
-                <h3>{data.percentage}%</h3>
-              </div>
-              <div className={styles['container-other-result__wrapper-right']}>
-                <h4>{data.tag}</h4>
-                <h3>{data.name}</h3>
-              </div>
-            </article>
-          ))} */}
+            {dummyData.slice(0, numberOfData).map((data, i) => (
+              <article className={styles.card} key={i}>
+                <div>
+                  <h2 className={styles.card__heading}>{data.percentage}%</h2>
+                </div>
+                <div className={styles.card__wrapper}>
+                  <h3 className={styles.card__subheading}>{data.name}</h3>
+                  <AiFillQuestionCircle
+                    className={styles.card__icon}
+                    onClick={() => {
+                      setModalClicked(true);
+                      setCurrentDataIndex(i);
+                    }}
+                  />
+                  <ProgressBar progress='83' />
+                </div>
+              </article>
 
-            <article className={styles.card}>
+              // <article
+              //   className={styles['container-other-result__wrapper']}
+              //   onClick={() => {
+              //     setModalClicked(true);
+              //     setCurrentDataIndex(i);
+              //   }}
+              //   key={i}
+              // >
+              //   <div className={styles['container-other-result__wrapper-left']}>
+              //     <h3>{data.percentage}%</h3>
+              //   </div>
+              //   <div className={styles['container-other-result__wrapper-right']}>
+              //     <h4>{data.tag}</h4>
+              //     <h3>{data.name}</h3>
+              //   </div>
+              // </article>
+            ))}
+
+            {/* <article className={styles.card}>
               <div>
                 <h2 className={styles.card__heading}>83%</h2>
               </div>
@@ -294,8 +311,8 @@ function Result() {
                 <AiFillQuestionCircle className={styles.card__icon} />
                 <ProgressBar progress='83' />
               </div>
-            </article>
-            <article className={styles.card}>
+            </article> */}
+            {/* <article className={styles.card}>
               <div>
                 <h2 className={styles.card__heading}>74%</h2>
               </div>
@@ -304,7 +321,7 @@ function Result() {
                 <AiFillQuestionCircle className={styles.card__icon} />
                 <ProgressBar progress='74' />
               </div>
-            </article>
+            </article> */}
           </div>
           <div
             className={styles.container__footer}
