@@ -3,7 +3,6 @@ import * as ROUTES from '../../Constants/Routes';
 
 import styles from './Result.module.css';
 import Modal from '../../components/Modal/Modal';
-import background from '../../Images/Vector 10.png';
 import healthCheck from '../../Images/Layer 2.png';
 import { AiFillQuestionCircle } from 'react-icons/ai';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
@@ -12,9 +11,10 @@ import { Link } from 'react-router-dom';
 
 function Result() {
   const [modalClicked, setModalClicked] = useState(false);
-  const [NumberOfAddition, setNumberOfAddition] = useState(3);
   const [currentDataIndex, setCurrentDataIndex] = useState(0);
   const [numberOfData, setNumberOfData] = useState(3);
+  const [width, setWidth] = useState(window.innerWidth);
+  const numOfDataPerLoad = 3;
 
   let dummyData = [
     {
@@ -137,6 +137,17 @@ function Result() {
     }
   }, [modalClicked]);
 
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
   return (
     <main className={styles.main}>
       <section className={styles.container + ' ' + styles['container--left']}>
@@ -156,7 +167,7 @@ function Result() {
         className={styles.container + ' ' + styles['container--description']}
       >
         <img className={styles.container__image} src={healthCheck} alt='' />
-        <img className={styles.container__background} src={background} alt='' />
+        <div className={styles.container__background}></div>
         <div className={styles.wrapper}>
           <h2 className={styles.container__heading}>What is Tuberculosis?</h2>
           <h3
@@ -244,45 +255,58 @@ function Result() {
                 Nibh non interdum cursus ornare pretium ut.
               </p>
             </div>
-
-            <div>
-              <label for='numOfData'>Number Of Data:</label>
-
-              <select
-                name='numOfData'
-                id='numOfData'
-                onChange={(e) => {
-                  setNumberOfAddition(e.target.value);
-                }}
-              >
-                <option value='3'>3</option>
-                <option value='6'>6</option>
-                <option value='9'>9</option>
-                <option value='12'>12</option>
-                <option value='15'>15</option>
-                <option value='15'>All</option>
-              </select>
-            </div>
           </article>
 
           <div className={styles['container-other-result']}>
-            {dummyData.slice(0, numberOfData).map((data, i) => (
-              <article className={styles.card} key={i}>
-                <div>
-                  <h2 className={styles.card__heading}>{data.percentage}%</h2>
-                </div>
-                <div className={styles.card__wrapper}>
-                  <h3 className={styles.card__subheading}>{data.name}</h3>
-                  <AiFillQuestionCircle
-                    className={styles.card__icon}
-                    onClick={() => {
-                      setModalClicked(true);
-                      setCurrentDataIndex(i);
-                    }}
-                  />
-                  <ProgressBar progress='83' />
-                </div>
-              </article>
+            {dummyData.slice(0, numberOfData).map(
+              (data, i) =>
+                width > 1024 ? (
+                  <article className={styles.card} key={i}>
+                    <div>
+                      <h2 className={styles.card__heading}>
+                        {data.percentage}%
+                      </h2>
+                    </div>
+                    <div className={styles.card__wrapper}>
+                      <h3 className={styles.card__subheading}>{data.name}</h3>
+                      <AiFillQuestionCircle
+                        className={styles.card__icon}
+                        onClick={() => {
+                          setModalClicked(true);
+                          setCurrentDataIndex(i);
+                        }}
+                      />
+                      <ProgressBar progress='83' />
+                    </div>
+                  </article>
+                ) : (
+                  <article
+                    className={styles.card + ' ' + styles['card--mobile']}
+                  >
+                    <div
+                      className={
+                        styles.card__wrapper + ' ' + styles['wrapper--between']
+                      }
+                    >
+                      <h2 className={styles.card__heading}>
+                        {data.percentage}%
+                      </h2>
+                      <div className={styles.card__wrapper}>
+                        <h3 className={styles.card__subheading}>{data.name}</h3>
+                        <AiFillQuestionCircle
+                          className={styles.card__icon}
+                          onClick={() => {
+                            setModalClicked(true);
+                            setCurrentDataIndex(i);
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <ProgressBar progress='83' />
+                    </div>
+                  </article>
+                )
 
               // <article
               //   className={styles['container-other-result__wrapper']}
@@ -300,18 +324,8 @@ function Result() {
               //     <h3>{data.name}</h3>
               //   </div>
               // </article>
-            ))}
+            )}
 
-            {/* <article className={styles.card}>
-              <div>
-                <h2 className={styles.card__heading}>83%</h2>
-              </div>
-              <div className={styles.card__wrapper}>
-                <h3 className={styles.card__subheading}>Leukimia</h3>
-                <AiFillQuestionCircle className={styles.card__icon} />
-                <ProgressBar progress='83' />
-              </div>
-            </article> */}
             {/* <article className={styles.card}>
               <div>
                 <h2 className={styles.card__heading}>74%</h2>
@@ -327,11 +341,10 @@ function Result() {
             className={styles.container__footer}
             onClick={() => {
               if (numberOfData > dummyData.length) {
+                setNumberOfData(dummyData.length);
                 console.log('Full');
               } else {
-                setNumberOfData(
-                  Number(numberOfData) + Number(NumberOfAddition)
-                );
+                setNumberOfData(Number(numberOfData) + numOfDataPerLoad);
               }
               console.log('numberOfData', numberOfData);
             }}
