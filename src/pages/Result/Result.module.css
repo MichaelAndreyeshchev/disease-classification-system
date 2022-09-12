@@ -187,7 +187,7 @@
   padding: 1em;
   font-family: 'Nunito';
   font-weight: 700;
-  font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
 
   background: #b1c3ff;
   border: 2px solid #000000;
@@ -319,7 +319,7 @@
 
 .card__heading {
   font-weight: 700;
-  font-size: clamp(1.3rem, 5vw, 2.5rem);
+  font-size: clamp(1.3rem, 4.5vw, 2.5rem);
 }
 
 .card__icon {
@@ -386,7 +386,7 @@
 
   font-family: 'Nunito';
   font-weight: 700;
-  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
   color: #000000;
 
   background: #ffffff;
@@ -416,11 +416,22 @@
     width: 34vw;
     justify-self: flex-end;
     align-self: flex-end;
-    margin: -22.5em 4% 0 0;
+    margin: -19.5em 4% 0 0;
   }
 
   .container__background {
-    height: 85%;
+    height: 90%;
+  }
+
+  .image--center {
+    width: 45vw;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  .container__button {
+    padding: 1em;
   }
 }
 
@@ -434,13 +445,6 @@
   .container--description {
     padding-top: 0;
     margin-top: 6em;
-  }
-
-  .image--center {
-    width: 45vw;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
   }
 
   .container__heading,
@@ -493,5 +497,9 @@
 
   .container__button {
     padding: 1em 3em;
+  }
+
+  .container__background {
+    height: 85%;
   }
 }
