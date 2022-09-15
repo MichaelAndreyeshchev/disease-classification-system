@@ -129,13 +129,13 @@ function Result() {
     },
   ];
 
-  useEffect(() => {
-    if (modalClicked) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [modalClicked]);
+  // useEffect(() => {
+  //   if (modalClicked) {
+  //     document.body.style.overflow = 'hidden';
+  //   } else {
+  //     document.body.style.overflow = '';
+  //   }
+  // }, [modalClicked]);
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowSizeChange);
