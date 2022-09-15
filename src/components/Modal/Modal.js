@@ -112,19 +112,8 @@ const Modal = (props) => {
         }
       >
         <div className={styles.modal__content}>
-          <div className={styles.modal__header}>
-            <div>
-              <h2 className={styles['modal-header__heading']}>{props.title}</h2>
-            </div>
-            <div
-              className={styles.modal__links}
-              onClick={() => props.setModalOpen(false)}
-            >
-              <FiX />
-            </div>
-          </div>
           <div className={styles.modal__body}>
-            {props.variant === 'download' ? (
+            {/* {props.variant === 'download' ? (
               <div
                 className={styles.wrapper + ' ' + styles['wrapper--download']}
               >
@@ -218,34 +207,36 @@ const Modal = (props) => {
                   variant='reject'
                 />
               </div>
-            ) : (
-              <div>
-                {isLoading ? (
-                  <p>Loading...</p>
-                ) : (
-                  <article>
-                    <div>
-                      <h2>Disease: {props.data.name}</h2>
-                      <h3>Body system: {props.data.tag} system</h3>
-                      <h4>Probability: {props.data.percentage}%</h4>
-                    </div>
-                    <div
-                      className={styles['body__wrapper']}
-                      dangerouslySetInnerHTML={{ __html: wikiData && wikiData }}
-                    ></div>
-                    <br />
-                    <div>
-                      <h3>
-                        Don't know some of the words here?{' '}
-                        <a href={LearnMoreUrl} target='_blank'>
-                          Learn more
-                        </a>
-                      </h3>
-                    </div>
-                  </article>
-                )}
-              </div>
-            )}
+            ) : ( */}
+            <div>
+              {isLoading ? (
+                <p>Loading...</p>
+              ) : (
+                <article>
+                  <div>
+                    <h2 className={styles.body__heading}>{props.data.name}</h2>
+                    <h3 className={styles.body__subheading}>
+                      Body system: {props.data.tag} system
+                    </h3>
+                    <h4>{props.data.percentage}%</h4>
+                  </div>
+                  <div
+                    className={styles['body__wrapper']}
+                    dangerouslySetInnerHTML={{ __html: wikiData && wikiData }}
+                  ></div>
+                  <br />
+                  <div>
+                    <h3>
+                      Don't know some of the words here?{' '}
+                      <a href={LearnMoreUrl} target='_blank'>
+                        Learn more
+                      </a>
+                    </h3>
+                  </div>
+                </article>
+              )}
+            </div>
+
             {/* <div className={styles.wrapper}>
               <h1>This is modal body</h1>
               <ul className={styles.list}>
