@@ -99,12 +99,12 @@
 .container__heading,
 .container__percentages,
 .container__heading--result {
+  align-self: flex-start;
   margin-bottom: 1rem;
 
   font-size: clamp(1.4rem, 2.7vw, 2.1rem);
   font-family: 'Nunito';
   font-weight: 500;
-  align-self: flex-start;
 }
 
 .container__heading {
