@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FiX } from 'react-icons/fi';
 import styles from './Modal.module.css';
 import ModalButton from '../Button/ModalButton';
+import thanksImage from '../../Images/Intersect.png';
 
 import { CSVLink } from 'react-csv';
 import * as XLSX from 'xlsx';
@@ -112,7 +112,13 @@ const Modal = (props) => {
         }
       >
         <div className={styles.modal__content}>
-          <div className={styles.modal__body}>
+          <div
+            className={
+              styles.modal__body +
+              ' ' +
+              (props.variant === 'thanks' && styles['body--noPadding'])
+            }
+          >
             {/* {props.variant === 'download' ? (
               <div
                 className={styles.wrapper + ' ' + styles['wrapper--download']}
@@ -207,8 +213,30 @@ const Modal = (props) => {
                   variant='reject'
                 />
               </div>
-            ) : ( */}
-            <div>
+            </article>
+            {/* {props.variant === "thanks" ?  }  */}
+            <article className={styles.container}>
+              <img
+                src={thanksImage}
+                alt='thank you image'
+                className={styles.body__image}
+              />
+              <div>
+                <h2
+                  className={
+                    styles.body__heading + ' ' + styles['heading--big']
+                  }
+                >
+                  Thank You!
+                </h2>
+                <p className={styles.body__description}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem beatae perspiciatis alias quae ratione
+                  deleniti.
+                </p>
+              </div>
+            </article>
+            {/* <div>
               {isLoading ? (
                 <p>Loading...</p>
               ) : (
@@ -235,17 +263,6 @@ const Modal = (props) => {
                   </div>
                 </article>
               )}
-            </div>
-
-            {/* <div className={styles.wrapper}>
-              <h1>This is modal body</h1>
-              <ul className={styles.list}>
-                <li>
-                  <a href='#' className={styles.list__link}>
-                    Kaggle.com
-                  </a>
-                </li>
-              </ul>
             </div> */}
           </div>
           <div className={styles.modal__footer}>
