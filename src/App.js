@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import * as ROUTES from './Constants/Routes';
-import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
@@ -14,6 +12,9 @@ import Contact from './pages/Contact/Contact';
 import Sidebar from './components/Sidebar';
 import Credits from './pages/Credits/Credits';
 import TestiMonial from './components/TestiMonial/TestiMonial';
+
+import * as ROUTES from './Constants/Routes';
+import './App.css';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
