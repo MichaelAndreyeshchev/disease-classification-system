@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import CardOverlay from '../../components/Card/CardOverlay';
 import styles from './drop-file-input.module.css';
 import uploadImg from '../../Images/Icon.png';
 
@@ -86,7 +86,7 @@ const DropFileInput = (props) => {
         onDragLeave={onDragLeave}
         onDrop={onDrop}
       >
-        <article className={styles.container}>
+        {/* <article className={styles.container}>
           <div
             className={
               styles['drop-file-input__wrapper'] +
@@ -150,6 +150,9 @@ const DropFileInput = (props) => {
             webkitdirectory=''
             mozdirectory=''
           />
+        </article> */}
+        <article className={styles.container}>
+          <CardOverlay />
         </article>
         <button className={styles.modal__button} onClick={handleSubmit}>
           Detect my disease
