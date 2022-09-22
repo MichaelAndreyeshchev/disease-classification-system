@@ -21,6 +21,27 @@
   justify-content: space-between;
 }
 
+.container--result {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-bottom: 1em;
+
+  background: #ffffff;
+  border: 2px solid #09ac91;
+  border-radius: 15px;
+  scrollbar-color: red yellow;
+}
+
+.container--result::-webkit-scrollbar {
+  /* Remove scrollbar space */
+  /* width: 0; */
+
+  /* Optional: just make scrollbar invisible */
+  /* background: transparent; */
+}
+
 .title {
   margin: 1em 0;
 

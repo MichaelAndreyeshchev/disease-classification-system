@@ -151,9 +151,18 @@ const DropFileInput = (props) => {
             mozdirectory=''
           />
         </article> */}
-        <article className={styles.container}>
+        <div
+          // className={styles.container + ' ' + styles['container--result']}
+          className={styles['container--result']}
+        >
           <CardOverlay />
-        </article>
+          <CardOverlay />
+          <CardOverlay />
+          <CardOverlay />
+          <CardOverlay />
+          <CardOverlay />
+          <CardOverlay />
+        </div>
         <button className={styles.modal__button} onClick={handleSubmit}>
           Detect my disease
         </button>
