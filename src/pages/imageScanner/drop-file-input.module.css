@@ -24,6 +24,7 @@
 .container--result {
   width: 100%;
   display: flex;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   overflow-x: scroll;
   margin-bottom: 1em;
@@ -31,15 +32,25 @@
   background: #ffffff;
   border: 2px solid #09ac91;
   border-radius: 15px;
-  scrollbar-color: red yellow;
 }
 
 .container--result::-webkit-scrollbar {
   /* Remove scrollbar space */
-  /* width: 0; */
+  height: 8px;
+  background-color: transparent;
+  margin: 1em;
+  padding: 1em;
 
-  /* Optional: just make scrollbar invisible */
-  /* background: transparent; */
+  /* border-radius: 10px; */
+}
+
+.container--result::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.container--result::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b6b6b6;
 }
 
 .title {

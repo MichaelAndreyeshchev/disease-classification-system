@@ -76,6 +76,11 @@
   z-index: 10;
 }
 
+.card__text {
+  width: 100%;
+  word-wrap: break-word;
+}
+
 .button {
   width: 100%;
   padding: 0.5em 0;
