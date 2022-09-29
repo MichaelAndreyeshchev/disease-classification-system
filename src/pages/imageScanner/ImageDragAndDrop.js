@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CardOverlay from '../../components/Card/CardOverlay';
 import styles from './drop-file-input.module.css';
 import uploadImg from '../../Images/Icon.png';
+import xrayImage from '../../Images/xray_image.png';
 
 const DropFileInput = (props) => {
   let dummyData = [
@@ -138,7 +139,15 @@ const DropFileInput = (props) => {
     setDummyDatas(filteredData);
   };
 
-  const handleSubmit = () => {};
+  const handleDeleteAll = () => {
+    if (dummyDatas.length > 0) setDummyDatas([]);
+  };
+
+  const handleSubmit = () => {
+    if (dummyDatas.length > 0) {
+      alert('success detect my disease');
+    }
+  };
 
   return (
     <main className={styles.main + ' ' + (isDragged ? styles.dragover : ' ')}>
@@ -154,99 +163,120 @@ const DropFileInput = (props) => {
           cursus ornare pretium ut.
         </p>
       </article>
-      <div
-        className={styles['drop-file-input']}
-        onDragEnter={onDragEnter}
-        onDragLeave={onDragLeave}
-        onDrop={onDrop}
+      <article
+        className={styles.container + ' ' + styles['container--wrapper']}
       >
-        {dummyDatas.length === 0 ? (
-          <article className={styles.container}>
-            <div
-              className={
-                styles['drop-file-input__wrapper'] +
-                ' ' +
-                (isDragged ? styles['label-dragover'] : ' ')
-              }
-              onClick={handleImageClick}
-            >
-              <img src={uploadImg} alt='' className={styles.wrapper__image} />
-              <h2 className={styles.title + ' ' + styles['title--small']}>
-                Upload multiple{' '}
-                <span className={styles['highlight--blue']}>files</span>
-              </h2>
-              <p
+        <div
+          className={styles['drop-file-input']}
+          onDragEnter={onDragEnter}
+          onDragLeave={onDragLeave}
+          onDrop={onDrop}
+        >
+          {dummyDatas.length === 0 ? (
+            <article className={styles.container}>
+              <div
                 className={
-                  styles.description + ' ' + styles['description--small']
+                  styles['drop-file-input__wrapper'] +
+                  ' ' +
+                  (isDragged ? styles['label-dragover'] : ' ')
                 }
+                onClick={handleImageClick}
               >
-                supports .jpg and .png for file upload
-              </p>
-            </div>
-            <input
-              ref={imageInputRef}
-              type='file'
-              value=''
-              onChange={onFileDrop}
-              disabled={isDisabled}
-              className={styles.input}
-              accept='image/png, image/jpeg, image/jpg'
-              multiple
-            />
-            <div
-              className={
-                styles['drop-file-input__wrapper'] +
-                ' ' +
-                (isDragged ? styles['label-dragover'] : ' ')
-              }
-              onClick={handleFolderClick}
-            >
-              <img src={uploadImg} alt='' className={styles.wrapper__image} />
-              <h2 className={styles.title + ' ' + styles['title--small']}>
-                Upload multiple{' '}
-                <span className={styles['highlight--blue']}>folders</span>
-              </h2>
-              <p
+                <img src={uploadImg} alt='' className={styles.wrapper__image} />
+                <h2 className={styles.title + ' ' + styles['title--small']}>
+                  Upload multiple{' '}
+                  <span className={styles['highlight--blue']}>files</span>
+                </h2>
+                <p
+                  className={
+                    styles.description + ' ' + styles['description--small']
+                  }
+                >
+                  supports .jpg and .png for file upload
+                </p>
+              </div>
+              <input
+                ref={imageInputRef}
+                type='file'
+                value=''
+                onChange={onFileDrop}
+                disabled={isDisabled}
+                className={styles.input}
+                accept='image/png, image/jpeg, image/jpg'
+                multiple
+              />
+              <div
                 className={
-                  styles.description + ' ' + styles['description--small']
+                  styles['drop-file-input__wrapper'] +
+                  ' ' +
+                  (isDragged ? styles['label-dragover'] : ' ')
                 }
+                onClick={handleFolderClick}
               >
-                detects all the image files inside
-              </p>
+                <img src={uploadImg} alt='' className={styles.wrapper__image} />
+                <h2 className={styles.title + ' ' + styles['title--small']}>
+                  Upload multiple{' '}
+                  <span className={styles['highlight--blue']}>folder</span>
+                </h2>
+                <p
+                  className={
+                    styles.description + ' ' + styles['description--small']
+                  }
+                >
+                  detects all the image files inside
+                </p>
+              </div>
+              <input
+                ref={folderInputRef}
+                type='file'
+                value=''
+                onChange={(e) => onFileDrop(e, true)}
+                disabled={isDisabled}
+                className={styles.input}
+                directory=''
+                webkitdirectory=''
+                mozdirectory=''
+              />
+            </article>
+          ) : (
+            <div
+              className={styles.container + ' ' + styles['container--result']}
+            >
+              {dummyDatas.map((data, i) => {
+                return (
+                  <CardOverlay
+                    key={i}
+                    text={`${data.name}+${data.id}`}
+                    imageUrl={data.imageUrl}
+                    onClick={() => handleDelete(data.id)}
+                  />
+                );
+              })}
             </div>
-            <input
-              ref={folderInputRef}
-              type='file'
-              value=''
-              onChange={(e) => onFileDrop(e, true)}
-              disabled={isDisabled}
-              className={styles.input}
-              directory=''
-              webkitdirectory=''
-              mozdirectory=''
-            />
-          </article>
-        ) : (
-          <div
-            className={styles.container + ' ' + styles['container--result']}
-            // className={styles['container--result']}
-          >
-            {dummyDatas.map((data, i) => {
-              return (
-                <CardOverlay
-                  key={i}
-                  text={`${data.name}+${data.id}`}
-                  imageUrl={data.imageUrl}
-                  onClick={() => handleDelete(data.id)}
-                />
-              );
-            })}
+          )}
+          <div className={styles.container}>
+            {dummyDatas.length > 0 && (
+              <button
+                className={styles.modal__button + ' ' + styles['button--clear']}
+                onClick={handleDeleteAll}
+              >
+                Clear files
+              </button>
+            )}
+            <button
+              className={
+                styles.modal__button +
+                ' ' +
+                (dummyDatas.length > 0 && styles['button--active'])
+              }
+              onClick={handleSubmit}
+            >
+              Detect my disease
+            </button>
           </div>
-        )}
-        <button className={styles.modal__button} onClick={handleSubmit}>
-          Detect my disease
-        </button>
-      </div>
+        </div>
+        <img className={styles.background} src={xrayImage} alt='x-ray-image' />
+      </article>
     </main>
   );
 };
