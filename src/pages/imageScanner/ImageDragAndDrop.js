@@ -207,7 +207,7 @@ const DropFileInput = (props) => {
               />
               <div
                 className={
-                  styles['drop-file-input__wrapper'] +
+                  styles['drop-folder-input__wrapper'] +
                   ' ' +
                   (isDragged ? styles['label-dragover'] : ' ')
                 }
@@ -215,7 +215,7 @@ const DropFileInput = (props) => {
               >
                 <img src={uploadImg} alt='' className={styles.wrapper__image} />
                 <h2 className={styles.title + ' ' + styles['title--small']}>
-                  Upload multiple{' '}
+                  Upload a{' '}
                   <span className={styles['highlight--blue']}>folder</span>
                 </h2>
                 <p
