@@ -114,9 +114,10 @@ const Modal = (props) => {
         <div className={styles.modal__content}>
           <div
             className={
-              styles.modal__body +
-              ' ' +
-              (props.variant === 'thanks' && styles['body--noPadding'])
+              styles.modal__body
+              // +
+              // ' ' +
+              // (props.variant === 'thanks' && styles['body--noPadding'])
             }
           >
             {/* {props.variant === 'download' ? (
@@ -212,46 +213,30 @@ const Modal = (props) => {
                   onClick={handleDownload}
                   variant='reject'
                 />
-              </div>
-            </article>
-            {/* {props.variant === "thanks" ?  }  */}
-            <article className={styles.container}>
-              <img
-                src={thanksImage}
-                alt='thank you image'
-                className={styles.body__image}
-              />
-              <div>
-                <h2
-                  className={
-                    styles.body__heading + ' ' + styles['heading--big']
-                  }
-                >
-                  Thank You!
-                </h2>
-                <p className={styles.body__description}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Exercitationem beatae perspiciatis alias quae ratione
-                  deleniti.
-                </p>
-              </div>
-            </article>
-            {/* <div>
+              </div> */}
+
+            <div>
               {isLoading ? (
                 <p>Loading...</p>
               ) : (
                 <article>
                   <div>
                     <h2 className={styles.body__heading}>{props.data.name}</h2>
-                    <h3 className={styles.body__subheading}>
+                    <h3 className={styles.body__subheading}>Overview</h3>
+                    {/* <h3 className={styles.body__subheading}>
                       Body system: {props.data.tag} system
-                    </h3>
-                    <h4>{props.data.percentage}%</h4>
+                    </h3> */}
+                    {/* <h4>{props.data.percentage}%</h4> */}
+                    <div
+                      className={styles['body__wrapper']}
+                      dangerouslySetInnerHTML={{ __html: wikiData && wikiData }}
+                    ></div>
+                    <h3 className={styles.body__subheading}>Your next steps</h3>
+                    <div
+                      className={styles['body__wrapper']}
+                      dangerouslySetInnerHTML={{ __html: wikiData && wikiData }}
+                    ></div>
                   </div>
-                  <div
-                    className={styles['body__wrapper']}
-                    dangerouslySetInnerHTML={{ __html: wikiData && wikiData }}
-                  ></div>
                   <br />
                   <div>
                     <h3>
@@ -263,7 +248,7 @@ const Modal = (props) => {
                   </div>
                 </article>
               )}
-            </div> */}
+            </div>
           </div>
           <div className={styles.modal__footer}>
             <ModalButton
@@ -276,5 +261,32 @@ const Modal = (props) => {
     </>
   );
 };
+
+/*
+
+  //  <article className={styles.container}>
+            //   <img
+            //     src={thanksImage}
+            //     alt='thank you image'
+            //     className={styles.body__image}
+            //   />
+            //   <div>
+            //     <h2
+            //       className={
+            //         styles.body__heading + ' ' + styles['heading--big']
+            //       }
+            //     >
+            //       Thank You!
+            //     </h2>
+            //     <p className={styles.body__description}>
+            //       Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            //       Exercitationem beatae perspiciatis alias quae ratione
+            //       deleniti.
+            //     </p>
+            //   </div>
+            // </article>
+
+
+*/
 
 export default Modal;
