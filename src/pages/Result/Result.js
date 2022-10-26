@@ -390,7 +390,7 @@ function Result() {
                 styles.container__heading + ' ' + styles['text--center']
               }
             >
-              Support us by contributing
+              Thank you for using Disease Tracker!
             </h3>
             <p
               className={
@@ -404,9 +404,6 @@ function Result() {
               improve our system by contributing and let us storing your
               prefilled data to our database.
             </p>
-            <button className={styles.container__button}>
-              I allow the developers to collect my data!
-            </button>
           </div>
 
           <div className={styles.circle}></div>
