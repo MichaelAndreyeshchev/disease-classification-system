@@ -14,6 +14,7 @@ import Credits from './pages/Credits/Credits';
 import TestiMonial from './components/TestiMonial/TestiMonial';
 
 import * as ROUTES from './Constants/Routes';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {

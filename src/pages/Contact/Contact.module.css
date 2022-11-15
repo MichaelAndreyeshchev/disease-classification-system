@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root {
   --primary-color: #c4c4c4;
@@ -264,5 +264,154 @@ textarea::-ms-input-placeholder {
 
   .btn {
     padding: 0.45rem 1.2rem;
+  }
+} */
+
+/* -------------------- INI MULAI YANG BENER !!!! ------------------- */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  font-family: 'Inter', 'sans-serif';
+  padding-top: 2em;
+
+  background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
+  border: 1px solid red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.container__heading,
+.container__description,
+.form__label {
+  font-family: 'Nunito';
+}
+
+.container__heading,
+.form__label {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 95px;
+  color: #09ac91;
+}
+
+.form__label {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.form__input,
+.form__textarea {
+  padding: 0.6em !important;
+  border: 1px solid #09ac91 !important;
+  border-radius: 5px !important;
+}
+
+.form__textarea {
+  height: 325px;
+  resize: none;
+}
+
+.form__button {
+  width: 100% !important;
+  padding: 0.5em;
+
+  font-size: clamp(0.8rem, 3vw, 1rem) !important;
+  font-weight: 700 !important;
+  line-height: 32px !important;
+  color: #000;
+
+  background: #3ee7ba !important;
+  border: 1px solid #000000 !important;
+  border-radius: 5px !important;
+  transition: 0.2s all ease-in-out;
+}
+
+.form__button:hover {
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.container__description {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+  margin-bottom: 4em;
+  color: #000000;
+}
+
+.container__image {
+  display: none;
+}
+
+.section__home {
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5em;
+  border: 1px solid yellow;
+}
+
+.section__message {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.5em;
+}
+
+.wrapper--row {
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin-bottom: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .main {
+    padding: 2em 4em;
+  }
+
+  .container {
+  }
+
+  .section__home {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 2em;
+  }
+
+  .wrapper--row {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3em;
+  }
+
+  .container__image {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .section__form {
+    min-height: 500px;
+    padding: 1.5em;
+    background: #e3fff1;
+    border: 2px solid #000000;
+    box-shadow: -12px 12px 0px #09ac91;
+    border-radius: 10px;
   }
 }
