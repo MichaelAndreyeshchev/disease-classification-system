@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <main className={styles.main}>
-      <section className={styles.container + ' ' + styles.section__home}>
+      <section className={`${styles.container} ${styles.section__home}`}>
         <article className={styles.wrapper}>
           <div>
             <h1 className={styles.wrapper__title}>
@@ -22,7 +22,7 @@ function Home() {
           <div>
             <p className={styles.wrapper__description}>
               Welcome to{' '}
-              <span className={styles['text-highlight']}>Disease Tracker</span>,
+              <span className={styles['text_highlight']}>Disease Tracker</span>,
               this is a sophisticated and intuitive tool that you can always
               rely on whenever you’re in a pinch!
             </p>
@@ -37,12 +37,12 @@ function Home() {
         </div>
       </section>
 
-      <section className={styles.container + ' ' + styles.section__features}>
-        <h2 className={styles.wrapper__title + ' ' + styles['title--small']}>
+      <section className={`${styles.container} ${styles.section__features}`}>
+        <h2 className={`${styles.wrapper__title} ${styles['title--small']}`}>
           Tell us your preferred way to get your disease diagnosed
         </h2>
 
-        <article className={styles.wrapper + ' ' + styles['wrapper--row']}>
+        <article className={`${styles.wrapper} ${styles['wrapper--row']}`}>
           <Link to={ROUTES.TEXT_DETECTION} className={styles['option_link']}>
             <div className={styles.option}>
               <img className={styles.option__image} src={text_option} alt='' />
@@ -54,7 +54,7 @@ function Home() {
             </div>
           </Link>
           <Link to={ROUTES.IMAGE_INDIVIDUAL} className={styles['option_link']}>
-            <div className={styles.option + ' ' + styles['option--right']}>
+            <div className={`${styles.option} ${styles['option--right']}`}>
               <img className={styles.option__image} src={image_option} alt='' />
               <h3 className={styles.option__title}>Upload images of disease</h3>
               <p className={styles.option__description}>

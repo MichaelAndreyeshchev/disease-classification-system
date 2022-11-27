@@ -162,7 +162,7 @@ const Contact = () => {
     //   </div>
     // </div>
     <main className={styles.main}>
-      <section className={styles.container + ' ' + styles.section__message}>
+      <section className={`${styles.container} ${styles.section__message}`}>
         <h2 className={styles.container__heading}>Let's Connect!</h2>
         <p className={styles.container_description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis
@@ -176,7 +176,7 @@ const Contact = () => {
         />
       </section>
 
-      <section className={styles.container + ' ' + styles.section__form}>
+      <section className={`${styles.container} ${styles.section__form}`}>
         <form className='row g-3'>
           <div className='col-md-6'>
             <label

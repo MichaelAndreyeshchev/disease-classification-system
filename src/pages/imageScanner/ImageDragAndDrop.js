@@ -150,7 +150,7 @@ const DropFileInput = (props) => {
   };
 
   return (
-    <main className={styles.main + ' ' + (isDragged ? styles.dragover : ' ')}>
+    <main className={`${styles.main} ${isDragged ? styles.dragover : ' '}`}>
       <article className={styles.wrapper}>
         <h1 className={styles.title}>
           Please <span className={styles.title_highlight}>take pictures</span>{' '}
@@ -164,7 +164,7 @@ const DropFileInput = (props) => {
         </p>
       </article>
       <article
-        className={styles.container + ' ' + styles['container--wrapper']}
+        className={`${styles.container} ${styles['container--wrapper']}`}
       >
         <div
           className={styles['drop-file-input']}
@@ -175,22 +175,18 @@ const DropFileInput = (props) => {
           {dummyDatas.length === 0 ? (
             <article className={styles.container}>
               <div
-                className={
-                  styles['drop-file-input__wrapper'] +
-                  ' ' +
-                  (isDragged ? styles['label-dragover'] : ' ')
-                }
+                className={`${styles['drop-file-input__wrapper']} ${
+                  isDragged ? styles['label-dragover'] : ' '
+                }`}
                 onClick={handleImageClick}
               >
                 <img src={uploadImg} alt='' className={styles.wrapper__image} />
-                <h2 className={styles.title + ' ' + styles['title--small']}>
+                <h2 className={`${styles.title} ${styles['title--small']}`}>
                   Upload multiple{' '}
                   <span className={styles['highlight--blue']}>files</span>
                 </h2>
                 <p
-                  className={
-                    styles.description + ' ' + styles['description--small']
-                  }
+                  className={`${styles.description} ${styles['description--small']}`}
                 >
                   supports .jpg and .png for file upload
                 </p>
@@ -206,22 +202,18 @@ const DropFileInput = (props) => {
                 multiple
               />
               <div
-                className={
-                  styles['drop-folder-input__wrapper'] +
-                  ' ' +
-                  (isDragged ? styles['label-dragover'] : ' ')
-                }
+                className={`${styles['drop-folder-input__wrapper']} ${
+                  isDragged ? styles['label-dragover'] : ' '
+                }`}
                 onClick={handleFolderClick}
               >
                 <img src={uploadImg} alt='' className={styles.wrapper__image} />
-                <h2 className={styles.title + ' ' + styles['title--small']}>
+                <h2 className={`${styles.title} ${styles['title--small']}`}>
                   Upload a{' '}
                   <span className={styles['highlight--blue']}>folder</span>
                 </h2>
                 <p
-                  className={
-                    styles.description + ' ' + styles['description--small']
-                  }
+                  className={`${styles.description} ${styles['description--small']}`}
                 >
                   detects all the image files inside
                 </p>
@@ -240,7 +232,7 @@ const DropFileInput = (props) => {
             </article>
           ) : (
             <div
-              className={styles.container + ' ' + styles['container--result']}
+              className={`${styles.container} ${styles['container--result']}`}
             >
               {dummyDatas.map((data, i) => {
                 return (
@@ -264,11 +256,9 @@ const DropFileInput = (props) => {
               </button>
             )}
             <button
-              className={
-                styles.modal__button +
-                ' ' +
-                (dummyDatas.length > 0 && styles['button--active'])
-              }
+              className={`${styles.modal__button} ${
+                dummyDatas.length > 0 && styles['button--active']
+              }`}
               onClick={handleSubmit}
             >
               Detect my disease

@@ -151,15 +151,13 @@ function Result() {
   return (
     <>
       <main className={styles.main}>
-        <section className={styles.container + ' ' + styles['container--left']}>
+        <section className={`${styles.container} ${styles['container--left']}`}>
           <h2 className={styles['container__heading--result']}>
             you might have
           </h2>
           <h1 className={styles.container__result}>Tubercolosis!</h1>
           <h3
-            className={
-              styles.container__subheading + ' ' + styles['subheading--small']
-            }
+            className={`${styles.container__subheading} ${styles['subheading--small']}`}
           >
             <span className={styles.container__percentages}>92%</span> matched
             your symptoms. <span className={styles.link}>Read more</span>
@@ -167,18 +165,14 @@ function Result() {
         </section>
 
         <section
-          className={styles.container + ' ' + styles['container--description']}
+          className={`${styles.container} ${styles['container--description']}`}
         >
           <img className={styles.container__image} src={healthCheck} alt='' />
           <div className={styles.container__background}></div>
           <div className={styles.wrapper}>
             <h2 className={styles.container__heading}>What is Tuberculosis?</h2>
             <h3
-              className={
-                styles.container__subheading +
-                ' ' +
-                styles['subheading--yellow']
-              }
+              className={`${styles.container__subheading} ${styles['subheading--yellow']}`}
             >
               Overview
             </h3>
@@ -247,15 +241,13 @@ function Result() {
 
         <section className={styles.container}>
           <article
-            className={styles.container + ' ' + styles['container--result']}
+            className={`${styles.container} ${styles['container--result']}`}
           >
             <article className={styles['container__header']}>
               <div>
                 <h2 className={styles.container__heading}>Other Top Results</h2>
                 <p
-                  className={
-                    styles.container__description + ' ' + styles['no--margin']
-                  }
+                  className={`${styles.container__description} ${styles['no--margin']}`}
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                   enim amet, maecenas ac. Ipsum mauris tortor nulla ultrices
@@ -289,14 +281,10 @@ function Result() {
                     </article>
                   ) : (
                     <article
-                      className={styles.card + ' ' + styles['card--mobile']}
+                      className={`${styles.card} ${styles['card--mobile']}`}
                     >
                       <div
-                        className={
-                          styles.card__wrapper +
-                          ' ' +
-                          styles['wrapper--between']
-                        }
+                        className={`${styles.card__wrapper} ${styles['wrapper--between']}`}
                       >
                         <h2 className={styles.card__heading}>
                           {data.percentage}%
@@ -365,7 +353,7 @@ function Result() {
                 Show more results
               </button>
               <button
-                className={styles.footer__button + ' ' + styles['button--grey']}
+                className={`${styles.footer__button} ${styles['button--grey']}`}
                 onClick={() => setModalClicked(true)}
               >
                 Download Results
@@ -375,29 +363,21 @@ function Result() {
         </section>
 
         <section
-          className={styles.container + ' ' + styles['container--collect-data']}
+          className={`${styles.container} ${styles['container--collect-data']}`}
         >
-          <div className={styles.wrapper + ' ' + styles['wrapper--center']}>
+          <div className={`${styles.wrapper} ${styles['wrapper--center']}`}>
             <img
-              className={
-                styles.container__image + ' ' + styles['image--center']
-              }
+              className={`${styles.container__image} ${styles['image--center']}`}
               src={background2}
               alt=''
             />
             <h3
-              className={
-                styles.container__heading + ' ' + styles['text--center']
-              }
+              className={`${styles.container__headin} ${styles['text--center']}`}
             >
               Thank you for using Disease Tracker!
             </h3>
             <p
-              className={
-                styles.container__description +
-                ' ' +
-                styles['description--center']
-              }
+              className={`${styles.container__description} ${styles['description--center']}`}
             >
               First of all, thank you for using our service! However, if you
               find our service helpful and insightful, you can always further
@@ -410,12 +390,10 @@ function Result() {
         </section>
 
         <section
-          className={styles.container + ' ' + styles['container--detect']}
+          className={`${styles.container} ${styles['container--detect']}`}
         >
           <h2
-            className={
-              styles.container__heading + ' ' + styles['heading--white']
-            }
+            className={`${styles.container__heading} ${styles['heading--white']}`}
           >
             Unsure or have another disease to track?
           </h2>

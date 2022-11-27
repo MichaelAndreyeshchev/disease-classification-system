@@ -60,7 +60,7 @@ class TextDetection extends Component {
                 Write down your symptoms
               </label>
               <label
-                className={styles.modal__label + ' ' + styles['label--black']}
+                className={`${styles.modal__label} ${styles['label--black']}`}
               >
                 separated by commas
               </label>
@@ -72,11 +72,9 @@ class TextDetection extends Component {
               value={this.state.userSymptomps}
               onChange={(e) => this.handleChange(e.target.value)}
               rows='13'
-              className={
-                styles.modal__input +
-                ' ' +
-                (this.state.errorText.length > 0 && styles['input--error'])
-              }
+              className={`${styles.modal__input} ${
+                this.state.errorText.length > 0 && styles['input--error']
+              }`}
             ></textarea>
             <input
               type='submit'
