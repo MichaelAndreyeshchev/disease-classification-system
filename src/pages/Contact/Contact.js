@@ -78,42 +78,40 @@ const Contact = () => {
         >
           {({ errors, touched, isSubmitting }) => (
             <Form className='row g-3'>
-              <article className='row'>
-                <div className='col-md-6'>
-                  <label
-                    for='name'
-                    className={`form-label ${styles.form__label}`}
-                  >
-                    Full Name
-                  </label>
-                  <Field
-                    as='input'
-                    className={`form-control ${styles.form__input}`}
-                    name='name'
-                    placeholder='John Doe'
-                  />
-                  <span className={styles.errors}>
-                    {errors.name && touched.name && errors.name}
-                  </span>
-                </div>
-                <div className='col-md-6'>
-                  <label
-                    for='email'
-                    className={`form-label ${styles.form__label}`}
-                  >
-                    Email
-                  </label>
-                  <Field
-                    as='input'
-                    className={`form-control ${styles.form__input}`}
-                    name='email'
-                    placeholder='john_doe@domain.com'
-                  />
-                  <span className={styles.errors}>
-                    {errors.email && touched.email && errors.email}
-                  </span>
-                </div>
-              </article>
+              <div className='col-md-6'>
+                <label
+                  for='name'
+                  className={`form-label ${styles.form__label}`}
+                >
+                  Full Name
+                </label>
+                <Field
+                  as='input'
+                  className={`form-control ${styles.form__input}`}
+                  name='name'
+                  placeholder='John Doe'
+                />
+                <span className={styles.errors}>
+                  {errors.name && touched.name && errors.name}
+                </span>
+              </div>
+              <div className='col-md-6'>
+                <label
+                  for='email'
+                  className={`form-label ${styles.form__label}`}
+                >
+                  Email
+                </label>
+                <Field
+                  as='input'
+                  className={`form-control ${styles.form__input}`}
+                  name='email'
+                  placeholder='john_doe@domain.com'
+                />
+                <span className={styles.errors}>
+                  {errors.email && touched.email && errors.email}
+                </span>
+              </div>
               <div className='col-12'>
                 <label
                   for='subject'

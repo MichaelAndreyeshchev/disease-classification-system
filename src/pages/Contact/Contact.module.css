@@ -122,11 +122,17 @@
 
 .section__form {
   min-height: 500px;
+  margin-left: 0;
   padding: 1.5em;
   background: #e3fff1;
   border: 2px solid #000000;
   box-shadow: -12px 12px 0px #09ac91;
   border-radius: 10px;
+}
+
+.section__message,
+.section__form {
+  max-width: 900px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -161,6 +167,12 @@
     display: block;
     width: 35vw;
     height: 35vw;
-    margin-left: -4vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: -2.8em;
+  }
+
+  .section__form {
+    margin-left: 1em;
   }
 }
