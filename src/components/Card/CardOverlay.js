@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CardOverlay.module.css';
-import defaultImage from '../../Images/defaultFileImage.png';
+import defaultImage from '../../assets/Images/defaultFileImage.png';
 
 const CardOverlay = ({ text, imageUrl, onClick }) => {
   return (

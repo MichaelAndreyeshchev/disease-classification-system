@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './PopUpModal.module.css';
-import errorIcon from '../../Images/error_icon.png';
+import errorIcon from '../../assets/Images/Icon.png';
 
 const PopUpModal = ({ text, isModalOpen, onClose }) => {
   return (

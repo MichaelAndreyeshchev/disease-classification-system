@@ -2,8 +2,8 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import CardOverlay from '../../components/Card/CardOverlay';
 import styles from './drop-file-input.module.css';
-import uploadImg from '../../Images/Icon.png';
-import xrayImage from '../../Images/xray_image.png';
+import uploadImg from '../../assets/Images/Icon.png';
+import xrayImage from '../../assets/Images/xray_image.png';
 
 const DropFileInput = (props) => {
   let dummyData = [

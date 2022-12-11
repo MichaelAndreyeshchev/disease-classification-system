@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Modal.module.css';
 import ModalButton from '../Button/ModalButton';
-import thanksImage from '../../Images/Intersect.png';
+import thanksImage from '../../assets/Images/Intersect.png';
 
 import { CSVLink } from 'react-csv';
 import * as XLSX from 'xlsx';

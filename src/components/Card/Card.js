@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
-import avatar from '../../Images/avatar.png';
-import avatar2 from '../../Images/michael_avatar.png';
+import avatar from '../../assets/Images/avatar.png';
+import avatar2 from '../../assets/Images/michael_avatar.png';
 
 const Card = ({ name, role, description, variant }) => {
   return (

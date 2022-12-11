@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './TextDetection.module.css';
-import textDetectionImage from '../../Images/health-sick1.png';
+import textDetectionImage from '../../assets/Images/health-sick1.png';
 import PopUpModal from '../../components/Modal/PopUpModal';
 
 class TextDetection extends Component {

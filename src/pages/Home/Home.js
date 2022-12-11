@@ -3,9 +3,9 @@ import Button from '../../components/Button/Button';
 import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 import styles from './Home.module.css';
-import home_image from '../../Images/home_image.png';
-import text_option from '../../Images/text_option.png';
-import image_option from '../../Images/image_option.png';
+import home_image from '../../assets/Images/home_image.png';
+import text_option from '../../assets/Images/text_option.png';
+import image_option from '../../assets/Images/image_option.png';
 import { Link } from 'react-router-dom';
 
 function Home() {

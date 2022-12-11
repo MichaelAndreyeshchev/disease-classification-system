@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Contact.module.css';
 import { Formik, Form, Field } from 'formik';
-import groupImage from '../../Images/group-image.png';
+import groupImage from '../../assets/Images/group-image.png';
 import swal from 'sweetalert';
 
 const Contact = () => {

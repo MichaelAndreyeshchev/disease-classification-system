@@ -3,10 +3,10 @@ import * as ROUTES from '../../Constants/Routes';
 
 import styles from './Result.module.css';
 import Modal from '../../components/Modal/Modal';
-import healthCheck from '../../Images/Layer 2.png';
+import healthCheck from '../../assets/Images/Layer 2.png';
 import { AiFillQuestionCircle } from 'react-icons/ai';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import background2 from '../../Images/health-meditation 1.png';
+import background2 from '../../assets/Images/health-meditation 1.png';
 import { Link } from 'react-router-dom';
 
 function Result() {
