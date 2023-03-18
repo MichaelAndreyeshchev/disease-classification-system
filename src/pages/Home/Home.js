@@ -53,7 +53,7 @@ function Home() {
               </p>
             </div>
           </Link>
-          <Link to={ROUTES.IMAGE_INDIVIDUAL} className={styles['option_link']}>
+          <Link to={ROUTES.IMAGE_DETECTION} className={styles['option_link']}>
             <div className={`${styles.option} ${styles['option--right']}`}>
               <img className={styles.option__image} src={image_option} alt='' />
               <h3 className={styles.option__title}>Upload images of disease</h3>

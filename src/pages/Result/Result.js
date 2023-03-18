@@ -397,7 +397,7 @@ function Result() {
           >
             Unsure or have another disease to track?
           </h2>
-          <Link to={ROUTES.IMAGE_INDIVIDUAL} className={styles.container__link}>
+          <Link to={ROUTES.IMAGE_DETECTION} className={styles.container__link}>
             Detect Again
           </Link>
         </section>

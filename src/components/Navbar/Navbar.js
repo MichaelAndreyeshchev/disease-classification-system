@@ -12,7 +12,7 @@ function Navbar({ toggle }) {
         <Bars onClick={toggle} />
         <NavMenu>
           <NavLink to={ROUTES.TEXT_DETECTION}>Text Detection</NavLink>
-          <NavLink to={ROUTES.IMAGE_INDIVIDUAL}>Image Detection</NavLink>
+          <NavLink to={ROUTES.IMAGE_DETECTION}>Image Detection</NavLink>
           <NavLink to={ROUTES.CREDITS}>Credits</NavLink>
           <NavLink to={ROUTES.CONTACT}>Contact Us</NavLink>
         </NavMenu>

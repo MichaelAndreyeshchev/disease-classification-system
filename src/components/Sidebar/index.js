@@ -22,7 +22,7 @@ function Sidebar({ isOpen, toggle }) {
           <SidebarLink to={ROUTES.TEXT_DETECTION} onClick={toggle}>
             Text Detection
           </SidebarLink>
-          <SidebarLink to={ROUTES.IMAGE_INDIVIDUAL} onClick={toggle}>
+          <SidebarLink to={ROUTES.IMAGE_DETECTION} onClick={toggle}>
             Image Detection
           </SidebarLink>
           <SidebarLink to={ROUTES.CREDITS} onClick={toggle}>
