@@ -1,5 +1,3 @@
-/* -------------------- INI MULAI YANG BENER !!!! ------------------- */
-
 .main {
   display: flex;
   flex-direction: column;
@@ -8,7 +6,6 @@
   width: 100%;
   min-height: calc(100vh - 80px);
   font-family: 'Inter', 'sans-serif';
-  padding-top: 2em;
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
   padding: 2em 1.5em;
