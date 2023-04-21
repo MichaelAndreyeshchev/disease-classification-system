@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: clamp(200px, 40vw, 700px);
+  /* min-width: 200px; */
+  /* max-width: 700px; */
+
+  margin: 1em;
+  padding: 1em;
+
+  background: #ffffff;
+  border: 2px solid #09ac91;
+  border-radius: 5px;
+}
