@@ -16,7 +16,7 @@
 .wrapper__heading {
   font-family: 'Nunito';
   font-weight: 700;
-  font-size: 60px;
+  font-size: 45px;
   color: #09ac91;
   margin: 0.3em 0;
 }
@@ -34,6 +34,14 @@
 .heading--center,
 .description--center {
   text-align: center;
+}
+
+.description--left {
+  text-align: left;
+}
+
+.heading--big {
+  font-size: 60px;
 }
 
 .container {

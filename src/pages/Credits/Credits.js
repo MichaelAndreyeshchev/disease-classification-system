@@ -3,13 +3,14 @@ import styles from './Credits.module.css';
 
 import TestiMonial from '../../components/TestiMonial/TestiMonial';
 import Card from '../../components/Card/Card';
+import TableList from '../../components/TableList/TableList';
 
 const Credits = () => {
   return (
     <main className={styles.main}>
       <section className={styles.section}>
         <h1
-          className={`${styles.section__heading} ${styles['heading--center']}`}
+          className={`${styles.section__heading} ${styles['heading--center']} ${styles['heading--big']}`}
         >
           Behind the wonder!
         </h1>
@@ -22,15 +23,20 @@ const Credits = () => {
       </section>
 
       <section className={styles.section}>
-        <h1 className={styles.section__title}>Our Resources</h1>
-        <TestiMonial />
+        <h2 className={`${styles.section__heading}`}>Dataset Sources</h2>
+        <p
+          className={`${styles.section__description} ${styles['description--left']}`}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, magni?
+          Odio velit soluta error tempore!
+        </p>
+        {/* <TestiMonial /> */}
+        <TableList />
       </section>
 
       <section className={`${styles.section} ${styles['section--team']}`}>
         <article className={`${styles.container}`}>
-          <h2 className={styles.wrapper__heading}>
-            Guess who's behind the wonder?
-          </h2>
+          <h2 className={styles.wrapper__heading}>The Team</h2>
           <p className={styles.wrapper__description}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst ac
             pellentesque aliquet phasellus posuere commodo.
