@@ -4,6 +4,7 @@ import styles from './Credits.module.css';
 import TestiMonial from '../../components/TestiMonial/TestiMonial';
 import Card from '../../components/Card/Card';
 import TableList from '../../components/TableList/TableList';
+import { ERNEST, MICHAEL } from '../../Constants/ProfileType';
 
 const Credits = () => {
   return (
@@ -30,7 +31,6 @@ const Credits = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, magni?
           Odio velit soluta error tempore!
         </p>
-        {/* <TestiMonial /> */}
         <TableList />
       </section>
 
@@ -46,7 +46,7 @@ const Credits = () => {
               name='Michael Andrev'
               role='Data Scientist'
               description=''
-              variant='michael'
+              variant={MICHAEL}
             />
             <Card
               name='Joseph Haryanto'
@@ -57,7 +57,7 @@ const Credits = () => {
               name='Ernest Salim'
               role='Software Engineer'
               description=''
-              variant='michael'
+              variant={ERNEST}
             />
           </article>
         </article>
