@@ -16,7 +16,7 @@
 .wrapper__heading {
   font-family: 'Nunito';
   font-weight: 700;
-  font-size: 45px;
+  font-size: clamp(2rem, 2.7vw, 3rem);
   color: #09ac91;
   margin: 0.3em 0;
 }
@@ -26,9 +26,10 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   text-align: right;
   color: #09ac91;
+  text-align: left;
 }
 
 .heading--center,
@@ -36,12 +37,8 @@
   text-align: center;
 }
 
-.description--left {
-  text-align: left;
-}
-
 .heading--big {
-  font-size: 60px;
+  font-size: clamp(2.5rem, 3.5vw, 3.8rem);
 }
 
 .container {
@@ -79,9 +76,9 @@
 
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .wrapper--text {
@@ -94,13 +91,7 @@
     padding: 2em 8em;
   }
 
-  .container {
-  }
-
   .wrapper {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
   }
 }

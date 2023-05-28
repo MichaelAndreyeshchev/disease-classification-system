@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Credits.module.css';
 
-import TestiMonial from '../../components/TestiMonial/TestiMonial';
 import Card from '../../components/Card/Card';
 import TableList from '../../components/TableList/TableList';
 import { ERNEST, MICHAEL } from '../../Constants/ProfileType';
@@ -35,31 +34,29 @@ const Credits = () => {
       </section>
 
       <section className={`${styles.section} ${styles['section--team']}`}>
-        <article className={`${styles.container}`}>
-          <h2 className={styles.wrapper__heading}>The Team</h2>
-          <p className={styles.wrapper__description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst ac
-            pellentesque aliquet phasellus posuere commodo.
-          </p>
-          <article className={`${styles.wrapper}`}>
-            <Card
-              name='Michael Andrev'
-              role='Data Scientist'
-              description=''
-              variant={MICHAEL}
-            />
-            <Card
-              name='Joseph Haryanto'
-              role='Software Engineer'
-              description=''
-            />
-            <Card
-              name='Ernest Salim'
-              role='Software Engineer'
-              description=''
-              variant={ERNEST}
-            />
-          </article>
+        <h2 className={styles.section__heading}>The Team</h2>
+        <p className={styles.wrapper__description}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst ac
+          pellentesque aliquet phasellus posuere commodo.
+        </p>
+        <article className={`${styles.wrapper}`}>
+          <Card
+            name='Michael Andrev'
+            role='Data Scientist'
+            description=''
+            variant={MICHAEL}
+          />
+          <Card
+            name='Joseph Haryanto'
+            role='Software Engineer'
+            description=''
+          />
+          <Card
+            name='Ernest Salim'
+            role='Software Engineer'
+            description=''
+            variant={ERNEST}
+          />
         </article>
       </section>
     </main>
