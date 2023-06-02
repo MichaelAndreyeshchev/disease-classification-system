@@ -32,9 +32,9 @@ function Sidebar({ isOpen, toggle }) {
             Contact Us
           </SidebarLink>
         </SidebarMenu>
-        <SideBtnWrap>
+        {/* <SideBtnWrap>
           <SidebarRoute to='/signin'>Sign In</SidebarRoute>
-        </SideBtnWrap>
+        </SideBtnWrap> */}
       </SidebarWrapper>
     </SidebarContainer>
   );

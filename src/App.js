@@ -8,7 +8,7 @@ import ImageDetection from './pages/imageScanner/ImageDetection';
 import TextDetection from './pages/textDetection/TextDetection';
 import Result from './pages/Result/Result';
 import Contact from './pages/Contact/Contact';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import Credits from './pages/Credits/Credits';
 import TestiMonial from './components/TestiMonial/TestiMonial';
 
