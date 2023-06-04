@@ -15,6 +15,7 @@ import TestiMonial from './components/TestiMonial/TestiMonial';
 import * as ROUTES from './Constants/Routes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +33,10 @@ function App() {
         <Route path={ROUTES.LOADING} element={<Loading />} />
         <Route path={ROUTES.IMAGE_DETECTION} element={<ImageDetection />} />
         <Route path={ROUTES.TEXT_DETECTION} element={<TextDetection />} />
-        <Route path='/testimonials' element={<TestiMonial />} />
         <Route path={ROUTES.RESULT} element={<Result />} />
         <Route path={ROUTES.CONTACT} element={<Contact />} />
         <Route path={ROUTES.CREDITS} element={<Credits />} />
+        <Route path={ROUTES.NOT_FOUND} element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

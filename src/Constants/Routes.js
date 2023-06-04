@@ -5,3 +5,4 @@ export const TEXT_DETECTION = '/text-detection';
 export const RESULT = '/result';
 export const CREDITS = '/credits';
 export const CONTACT = '/contact';
+export const NOT_FOUND = '*';

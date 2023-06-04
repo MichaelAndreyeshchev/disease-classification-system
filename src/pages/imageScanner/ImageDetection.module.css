@@ -41,13 +41,10 @@
 }
 
 .container--result::-webkit-scrollbar {
-  /* Remove scrollbar space */
   height: 8px;
   background-color: transparent;
   margin: 1em;
   padding: 1em;
-
-  /* border-radius: 10px; */
 }
 
 .container--result::-webkit-scrollbar-track {

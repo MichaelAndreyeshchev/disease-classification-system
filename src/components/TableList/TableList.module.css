@@ -10,7 +10,6 @@
 .container__content {
   display: grid;
   grid-template-columns: 1fr;
-  border: 1px solid red;
   padding: 0;
 }
 
@@ -18,7 +17,6 @@
   display: flex;
   justify-content: center;
   margin-top: 1em;
-  border: 1px solid red;
 }
 
 .button {

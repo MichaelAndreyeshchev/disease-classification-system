@@ -1,6 +1,4 @@
 import React from 'react';
-import Button from '../../components/Button/Button';
-import LinkCustom from '../../components/Link/Link';
 import * as ROUTES from '../../Constants/Routes';
 import styles from './Home.module.css';
 import home_image from '../../assets/Images/home_image.png';
