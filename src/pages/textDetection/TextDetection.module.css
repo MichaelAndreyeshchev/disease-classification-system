@@ -30,7 +30,7 @@
   color: #000000;
 }
 
-.title_highlight {
+.title__highlight {
   color: #3ee7ba;
 }
 
@@ -81,19 +81,14 @@
 
   font-family: 'Inter';
   font-weight: 500;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
 }
 
-.modal__input::placeholder {
-  color: #e0e0e0;
-  opacity: 1;
-}
-
-.modal__input:-ms-input-placeholder {
-  color: #e0e0e0;
-}
-
+.modal__input::placeholder,
+.modal__input:-ms-input-placeholder,
 .modal__input::-ms-input-placeholder {
   color: #e0e0e0;
+  opacity: 1;
 }
 
 .input--error {
@@ -171,7 +166,6 @@
     align-items: center;
     width: clamp(18.7rem, 60vw, 50rem);
     padding: 2em 1em;
-    /* display: none; */
   }
 
   .modal__input {
