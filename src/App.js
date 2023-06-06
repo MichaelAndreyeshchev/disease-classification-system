@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Loading from './pages/Loading/Loading';
-import ImageDetection from './pages/imageScanner/ImageDetection';
+import ImageDetection from './pages/imageDetection/ImageDetection';
 import TextDetection from './pages/textDetection/TextDetection';
 import Result from './pages/Result/Result';
 import Contact from './pages/Contact/Contact';

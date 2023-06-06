@@ -58,9 +58,7 @@
 
 .title {
   margin: 1em 0;
-
   font-family: 'Nunito';
-  line-height: 44px;
   font-weight: 700;
   font-size: clamp(1.2rem, 5vw, 2.7rem);
   color: #000000;
@@ -73,7 +71,7 @@
 .title--small {
   text-align: center;
   color: #09ac91;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 1.5vw, 2rem);
   margin: 0.5em;
 }
 

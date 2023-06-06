@@ -65,18 +65,15 @@ const DropFileInput = (props) => {
   const [dummyDatas, setDummyDatas] = useState([]);
 
   const onDragEnter = () => {
-    console.log('Enter');
     setIsDragged(true);
     setIsDisabled(false);
   };
 
   const onDragLeave = () => {
-    console.log('onLeave');
     setIsDragged(false);
   };
 
   const onDrop = () => {
-    console.log('OnDrop');
     setIsDragged(false);
     setTimeout(() => {
       setIsDisabled(true);
@@ -88,9 +85,6 @@ const DropFileInput = (props) => {
       setIsDisabled(true);
     }, 300);
 
-    console.log(e.target.files);
-    console.log(typeof e.target.files);
-
     let files = [];
     for (let i = 0; i < e.target.files.length; i++) {
       const imageUrl = !isDirectory
@@ -101,18 +95,9 @@ const DropFileInput = (props) => {
         name: e.target.files[i].name,
         imageUrl: imageUrl,
       };
-      console.log(temp);
-      console.log(e.target.files[i].name);
       files.push(temp);
-      // files.push(e.target.files[i]);
     }
-
-    console.log('---------------------');
-    console.log(files);
     setDummyDatas(files);
-    // const newFile = e.target.files;
-    // console.log(newFile);
-    // console.log(newFile.name);
   };
 
   const handleImageClick = () => {
@@ -132,8 +117,6 @@ const DropFileInput = (props) => {
   };
 
   const handleDelete = (id) => {
-    console.log('pressed');
-    console.log(id);
     const duplicate = [...dummyDatas];
     const filteredData = duplicate.filter((data) => data.id !== id);
     setDummyDatas(filteredData);
