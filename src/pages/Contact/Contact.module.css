@@ -4,11 +4,11 @@
   justify-content: center;
 
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   font-family: 'Inter', 'sans-serif';
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
-  padding: 2em 1.5em;
+  padding: 6em 1.5em 2em;
 }
 
 .container {

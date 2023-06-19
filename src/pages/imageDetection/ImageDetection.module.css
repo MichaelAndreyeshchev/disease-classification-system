@@ -5,8 +5,8 @@
   align-items: flex-start;
 
   width: 100%;
-  min-height: calc(100vh - 80px);
-  padding: 2em 1.5em 4em;
+  min-height: 100vh;
+  padding: 4em 1.5em 4em;
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
 }

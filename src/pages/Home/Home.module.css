@@ -9,6 +9,7 @@
   font-family: 'Inter', 'sans-serif';
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
+  padding-top: 4em;
 }
 
 .container {
@@ -59,10 +60,12 @@
 .image_wrapper {
   justify-self: flex-end;
   align-self: flex-end;
+  /* border: 1px solid red; */
 }
 
 .image {
   width: 100%;
+  border: 1px solid blue;
 }
 
 .section__features {
@@ -124,12 +127,12 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .container {
-    min-height: 100vh;
+  .main {
+    padding: 0;
   }
 
-  .container:first-child {
-    min-height: calc(100vh - 80px);
+  .container {
+    min-height: 100vh;
   }
 
   .section__home {
@@ -137,6 +140,7 @@
     justify-content: space-between;
     padding: 0;
     padding-left: 3em;
+    border: 1px solid purple;
   }
 
   .wrapper--row {
@@ -146,7 +150,8 @@
   }
 
   .image {
-    width: min(55rem, 52vw);
+    width: min(65rem, 52vw);
+    /* width: min(46rem, 52vw); */
   }
 
   .section__features {
