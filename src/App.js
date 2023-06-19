@@ -10,7 +10,6 @@ import Result from './pages/Result/Result';
 import Contact from './pages/Contact/Contact';
 import Sidebar from './components/Sidebar/Sidebar';
 import Credits from './pages/Credits/Credits';
-import TestiMonial from './components/TestiMonial/TestiMonial';
 
 import * as ROUTES from './Constants/Routes';
 import 'bootstrap/dist/css/bootstrap.min.css';

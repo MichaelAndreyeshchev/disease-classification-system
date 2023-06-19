@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ROUTES from '../../Constants/Routes';
 import styles from './Home.module.css';
-import home_image from '../../assets/Images/home_image.png';
+import home_image from '../../assets/Images/home_image_cropped.png';
 import text_option from '../../assets/Images/text_option.png';
 import image_option from '../../assets/Images/image_option.png';
 import { Link } from 'react-router-dom';
