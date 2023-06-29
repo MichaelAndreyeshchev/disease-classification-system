@@ -168,7 +168,12 @@ function TableList() {
         })}
       </div>
       <div className={styles.container__footer}>
-        <button className={styles.button} onClick={() => handleUpdateIndex()}>
+        <button
+          className={`${styles.button} ${
+            index === dummyData.length && styles['button--white']
+          }`}
+          onClick={() => handleUpdateIndex()}
+        >
           {index !== dummyData.length
             ? 'See more datasets'
             : 'See less datasets'}

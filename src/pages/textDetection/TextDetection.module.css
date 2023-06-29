@@ -5,11 +5,10 @@
   align-items: flex-start;
 
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   position: relative;
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
-  border: 1px solid red;
   padding-top: 4em;
 }
 

@@ -60,12 +60,10 @@
 .image_wrapper {
   justify-self: flex-end;
   align-self: flex-end;
-  /* border: 1px solid red; */
 }
 
 .image {
   width: 100%;
-  border: 1px solid blue;
 }
 
 .section__features {
@@ -136,11 +134,11 @@
   }
 
   .section__home {
+    min-height: calc(100vh - 80px);
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
     padding-left: 3em;
-    border: 1px solid purple;
   }
 
   .wrapper--row {
@@ -151,7 +149,6 @@
 
   .image {
     width: min(65rem, 52vw);
-    /* width: min(46rem, 52vw); */
   }
 
   .section__features {

@@ -4,7 +4,7 @@
   justify-content: center;
 
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   font-family: 'Inter', 'sans-serif';
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);

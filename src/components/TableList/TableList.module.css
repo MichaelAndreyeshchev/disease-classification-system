@@ -40,6 +40,16 @@
   border: 2px solid #09ac91;
 }
 
+.button--white {
+  background: #fff;
+  color: #09ac91;
+}
+
+.button--white:hover {
+  background: #09ac91;
+  color: #ffffff;
+}
+
 @media screen and (min-width: 1200px) {
   .container__content {
     grid-template-columns: 1fr 1fr;
