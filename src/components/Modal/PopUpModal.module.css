@@ -19,8 +19,8 @@
   align-items: center;
   justify-content: space-around;
 
-  width: 39rem;
-  height: 33rem;
+  width: clamp(20rem, 36vw, 39rem);
+  height: clamp(20rem, 31vw, 33rem);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,15 +40,14 @@
 }
 
 .modal__image {
-  width: 17rem;
-  height: 17rem;
+  width: clamp(10rem, 16vw, 17rem);
 }
 
 .modal__text {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: clamp(1.4rem, 1.5vw, 2rem);
   line-height: 44px;
 
   text-align: center;
@@ -57,8 +56,8 @@
 }
 
 .modal__button {
-  width: 192px;
-  height: 60px;
+  width: clamp(7rem, 11vw, 12rem);
+  height: clamp(2.5rem, 3.5vw, 4rem);
 
   background: hsl(0, 0%, 100%);
   border: 1px solid #000000;
@@ -67,11 +66,8 @@
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 44px;
-
+  font-size: clamp(1.2rem, 4.5vw, 1.5rem);
   text-align: center;
-
   color: #000000;
 }
 

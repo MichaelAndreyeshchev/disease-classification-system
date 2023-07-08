@@ -9,7 +9,7 @@
   padding-top: 2em;
 
   background: linear-gradient(0deg, #e3fff1 0%, #ffffff 100%);
-  padding: 4em 1.5em 2em;
+  padding: 1em 1.5em 2em;
 }
 
 .section__heading,
@@ -87,7 +87,7 @@
 
 @media screen and (min-width: 1300px) {
   .main {
-    padding: 8em 8em 2em;
+    padding: 4em 8em 2em;
   }
 
   .wrapper {
